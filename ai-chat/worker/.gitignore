@@ -1,0 +1,18 @@
+# Safety — never commit secrets or local state (added Oct 20, 2026, API-key audit)
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*secret*
+*credential*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.wrangler/
+node_modules/
+*.zip
+*.log
+.DS_Store
