@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal — AMPED UP AUDIO</title>
+  <meta name="description" content="AMPED UP AUDIO client portal — log in with your email to see your sessions and rewards.">
+  <link rel="canonical" href="https://ampedup-audio.com/client-portal">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="prefetch" href="book-a-call.html">
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+<div id="progress" aria-hidden="true"></div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">AMPED UP <span>AUDIO</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="founders.html">Founder's Pass</a>
+      <a href="client-portal.html">Client Portal</a>
+      <a href="call-us.html">Call Us</a>
+      <a class="btn btn-blue" href="book-a-call.html">Book a session</a>
+    </div>
+  </div>
+</nav>
+<main>
+<section class="section page-top page-head">
+  <div class="container">
+    <p class="kicker reveal">Client Portal</p>
+    <h1 class="section-title reveal">Your sessions, in one place</h1>
+    <p class="section-sub reveal">Log in with your email — we send you a one-time code. No password to remember.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+<div id="aua-portal" style="padding:32px 20px;margin:0 auto;max-width:760px;color:#f4efe7;font-family:inherit;"> <style>#aua-portal .pt-card{background:#14243b;border:1px solid #8b5a2b;border-radius:14px;padding:32px 28px;box-shadow:0 8px 32px rgba(0,0,0,.35)}
+    #aua-portal h2{color:#d2b48c;letter-spacing:.14em;text-transform:uppercase;font-size:22px;margin:0 0 8px}
+    #aua-portal .pt-sub{color:#aeb5bf;margin:0 0 24px;font-size:15px;line-height:1.6}
+    #aua-portal input[type=text],#aua-portal input[type=email],#aua-portal input[type=tel]{width:100%;box-sizing:border-box;background:#122239;border:1px solid #55657a;color:#f4efe7;border-radius:8px;padding:12px 14px;font-size:15px;margin:0 0 14px;min-width:0}
+    #aua-portal input:focus{outline:none;border-color:#d2b48c}
+    #aua-portal button{cursor:pointer;background:#8b5a2b;color:#fff;border:none;border-radius:8px;padding:13px 28px;font-size:15px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+    #aua-portal button:hover{background:#a06a35}
+    #aua-portal button:disabled{opacity:.5;cursor:default}
+    #aua-portal button.pt-ghost{background:transparent;border:1px solid #8b5a2b;color:#d2b48c}
+    #aua-portal button.pt-ghost:hover{background:#1d2f47}
+    #aua-portal .pt-err{color:#e1a5a0;margin-top:12px;display:none;font-size:14px}
+    #aua-portal .pt-ok{color:#a8c3ae;margin-top:12px;display:none;font-size:14px}
+    #aua-portal{color-scheme:dark}
+    #aua-portal .pt-flabel{display:block;color:#aeb5bf;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:2px 0 6px}
+    #aua-portal .pt-label{color:#aeb5bf;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:22px 0 10px}
+    #aua-portal .pt-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    #aua-portal .pt-stat{background:#122239;border:1px solid #55657a;border-radius:10px;padding:16px;text-align:center}
+    #aua-portal .pt-stat .n{font-size:26px;color:#d2b48c;font-weight:800}
+    #aua-portal .pt-stat .l{color:#aeb5bf;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+    #aua-portal .pt-bk{background:#122239;border:1px solid #55657a;border-radius:10px;padding:16px 18px;margin:0 0 12px}
+    #aua-portal .pt-bk .row1{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+    #aua-portal .pt-bk .svc{color:#f4efe7;font-weight:700;font-size:15px}
+    #aua-portal .pt-bk .meta{color:#aeb5bf;font-size:14px;line-height:1.6}
+    #aua-portal .pt-bk .meta b{color:#f4efe7;font-weight:600}
+    #aua-portal .pt-pill{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-radius:20px;padding:4px 12px;border:1px solid}
+    #aua-portal .pt-pill.pending{color:#d2b48c;border-color:#d2b48c}
+    #aua-portal .pt-pill.paid{color:#a8c3ae;border-color:#a8c3ae}
+    #aua-portal .pt-bk .acts{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+    #aua-portal .pt-bk .acts a{color:#d2b48c;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+    #aua-portal .pt-credit{background:#122239;border:1px solid #d2b48c;border-radius:10px;padding:18px;margin:20px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    #aua-portal .pt-credit .amt{font-size:28px;color:#d2b48c;font-weight:800;white-space:nowrap}
+    #aua-portal .pt-credit .code{color:#d2b48c;font-weight:700}
+    #aua-portal .pt-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+    #aua-portal .pt-logout{background:none;border:none;padding:4px 0;min-height:44px;display:inline-flex;align-items:center;color:#aeb5bf;font-size:13px;letter-spacing:.06em;text-transform:none;font-weight:400;text-decoration:underline;text-underline-offset:3px}
+    #aua-portal .pt-logout:hover{background:none;color:#f4efe7}
+    #aua-portal .pt-empty{color:#aeb5bf;font-size:14px;background:#122239;border:1px dashed #55657a;border-radius:10px;padding:18px;text-align:center;margin:0 0 12px}
+    #aua-portal .pt-resend{background:none;border:none;padding:0;color:#d2b48c;font-size:14px;letter-spacing:0;text-transform:none;font-weight:400;text-decoration:underline;text-underline-offset:3px}
+    #aua-portal .pt-resend:hover{background:none;color:#f4efe7}
+    #aua-portal .pt-resend:disabled{color:#55657a;text-decoration:none}
+    #aua-portal .pt-code-input{max-width:220px;text-align:center;font-size:22px;letter-spacing:.35em;margin:0 auto 14px;display:block}
+    @media(max-width:560px){#aua-portal .pt-stats{grid-template-columns:1fr}}</style> 
+ <div id="pt-login" class="pt-card" style="text-align:center"> <div style="font-size:40px;margin-bottom:8px">🎤</div> 
+ <h2>Client Portal</h2> 
+ <p class="pt-sub">Your sessions, receipts, and balance &mdash; all in one place.<br/>Enter your email and we&rsquo;ll send you a login code.</p> 
+ <label class="pt-flabel" for="pt-email" style="text-align:left">Email</label> 
+<input type="email" id="pt-email" placeholder="you@example.com" autocomplete="email" data-placeholder-original="you@example.com"/> <button id="pt-sendcode" style="width:100%">Send login code</button> 
+ <div class="pt-err" id="pt-login-err"></div> 
+</div> 
+ <div id="pt-code" class="pt-card" style="display:none;text-align:center"> <h2>Check your email</h2> 
+ <p class="pt-sub" id="pt-code-sub">We sent a 6-digit code. It expires in 10 minutes.</p> 
+ <label class="pt-flabel" for="pt-code-input" style="text-align:left">Login code</label> 
+<input type="text" id="pt-code-input" class="pt-code-input" placeholder="......" inputmode="numeric" autocomplete="one-time-code" maxlength="6" data-placeholder-original="......"/> <button id="pt-verify" style="width:100%">Verify &amp; sign in</button> 
+ <div style="margin-top:14px"> <button class="pt-resend" id="pt-resend">Resend code</button> 
+</div> 
+ <div class="pt-err" id="pt-code-err"></div> 
+</div> 
+ <div id="pt-dash" style="display:none"> <div class="pt-card" style="margin-bottom:16px"> <div class="pt-top"> <div> <h2 id="pt-hello">Welcome back.</h2> 
+ <p class="pt-sub" id="pt-sub" style="margin-bottom:0"></p> 
+</div> 
+ <button class="pt-logout" id="pt-logout">Sign out</button> 
+</div> 
+ <div class="pt-stats"> <div class="pt-stat"> <div class="n" id="pt-stat-sessions">0</div> 
+ <div class="l">Sessions booked</div> 
+</div> 
+ <div class="pt-stat"> <div class="n" id="pt-stat-paid">$0</div> 
+ <div class="l">Total paid</div> 
+</div> 
+</div> 
+ <div id="pt-founder"></div> 
+ <div style="margin-top:20px"> <a href="book-a-call.html" style="text-decoration:none"> <button style="width:100%">Book a new session</button> 
+</a> 
+</div> 
+</div> 
+ <div class="pt-card" style="margin-bottom:16px"> <div class="pt-label" style="margin-top:0">Upcoming</div> 
+ <div id="pt-upcoming"></div> 
+ <div class="pt-label">Session history</div> 
+ <div id="pt-past"></div> 
+</div> 
+ <div class="pt-card"> <div class="pt-label" style="margin-top:0">Your profile</div> 
+ <label class="pt-flabel" for="pt-name">Name</label> 
+<input type="text" id="pt-name" placeholder="Your name" autocomplete="name" data-placeholder-original="Your name"/> <label class="pt-flabel" for="pt-phone">Phone</label> 
+<input type="tel" id="pt-phone" placeholder="Phone (optional)" autocomplete="tel" data-placeholder-original="Phone (optional)"/> <button id="pt-save" class="pt-ghost">Save profile</button> 
+ <div class="pt-ok" id="pt-save-ok">Saved.</div> 
+ <div class="pt-err" id="pt-save-err"></div> 
+</div> 
+</div> 
+</div> 
+ <script>
+
+
+(function(){
+  var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyVQ0IWJ0U1IXKyTG86UXuxpxg11nq9YLEhtItTydK1eJXDpMUpzSIBKrmTs3nu356Wkw/exec";
+  var TOKEN_KEY = "aua_portal_token";
+  var loginEmail = "";
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function money(n){ return "$" + Number(n || 0).toFixed(n % 1 ? 2 : 0); }
+  function getToken(){ try { return localStorage.getItem(TOKEN_KEY); } catch(e){ return null; } }
+  function setToken(t){ try { if (t) localStorage.setItem(TOKEN_KEY, t); else localStorage.removeItem(TOKEN_KEY); } catch(e){} }
+  function post(action, data){
+    data = data || {}; data.action = action;
+    return fetch(APPS_SCRIPT_URL, { method: "POST", headers: {"Content-Type":"text/plain"}, body: JSON.stringify(data) }).then(function(r){ return r.json(); });
+  }
+  function show(id){
+    ["pt-login","pt-code","pt-dash"].forEach(function(v){ $(v).style.display = (v === id) ? "block" : "none"; });
+    window.scrollTo(0, 0);
+  }
+  function err(id, msg){ var e = $(id); e.textContent = msg; e.style.display = "block"; }
+  function clearErr(id){ $(id).style.display = "none"; }
+  $("pt-sendcode").addEventListener("click", function(){
+    clearErr("pt-login-err");
+    var email = $("pt-email").value.trim();
+    if (!email || email.indexOf("@") < 0) { err("pt-login-err", "Enter a valid email address."); return; }
+    var btn = $("pt-sendcode"); btn.disabled = true; btn.textContent = "Sending...";
+    post("portal_requestCode", {email: email}).then(function(d){
+      btn.disabled = false; btn.textContent = "Send login code";
+      if (d && d.ok) {
+        loginEmail = email;
+        $("pt-code-sub").textContent = "We sent a 6-digit code to " + email + ". It expires in 10 minutes.";
+        $("pt-code-input").value = "";
+        startResendCooldown();
+        show("pt-code");
+        $("pt-code-input").focus();
+      } else {
+        err("pt-login-err", (d && d.error) || "Couldn't send the code. Try again.");
+      }
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = "Send login code";
+      err("pt-login-err", "Something didn't go through. Check your connection and try again.");
+    });
+  });
+  $("pt-email").addEventListener("keydown", function(e){ if (e.key === "Enter") $("pt-sendcode").click(); });
+  var resendTimer = null;
+  function startResendCooldown(){
+    var btn = $("pt-resend"), s = 60;
+    btn.disabled = true;
+    clearInterval(resendTimer);
+    resendTimer = setInterval(function(){
+      s--;
+      if (s <= 0) { clearInterval(resendTimer); btn.disabled = false; btn.textContent = "Resend code"; }
+      else { btn.textContent = "Resend code (" + s + "s)"; }
+    }, 1000);
+    btn.textContent = "Resend code (" + s + "s)";
+  }
+  $("pt-resend").addEventListener("click", function(){
+    if ($("pt-resend").disabled) return;
+    clearErr("pt-code-err");
+    post("portal_requestCode", {email: loginEmail}).then(function(d){
+      if (d && d.ok) startResendCooldown();
+      else err("pt-code-err", (d && d.error) || "Couldn't resend the code.");
+    }).catch(function(){ err("pt-code-err", "Something didn't go through. Try again."); });
+  });
+  $("pt-verify").addEventListener("click", function(){
+    clearErr("pt-code-err");
+    var code = $("pt-code-input").value.trim();
+    if (code.length < 6) { err("pt-code-err", "Enter the 6-digit code."); return; }
+    var btn = $("pt-verify"); btn.disabled = true; btn.textContent = "Verifying...";
+    post("portal_verifyCode", {email: loginEmail, code: code}).then(function(d){
+      btn.disabled = false; btn.textContent = "Verify & sign in";
+      if (d && d.ok && d.token) { setToken(d.token); loadDashboard(); }
+      else { err("pt-code-err", (d && d.error) || "That code didn't work. Try again."); }
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = "Verify & sign in";
+      err("pt-code-err", "Something didn't go through. Check your connection and try again.");
+    });
+  });
+  $("pt-code-input").addEventListener("keydown", function(e){ if (e.key === "Enter") $("pt-verify").click(); });
+  function pill(status){
+    var s = String(status || "pending").toLowerCase();
+    return '<span class="pt-pill ' + (s === "paid" ? "paid" : "pending") + '">' + esc(s) + "</span>";
+  }
+  function bookingCard(b){
+    var h = '<div class="pt-bk"><div class="row1"><span class="svc">' + esc(b.service || "Session") + "</span>" + pill(b.status) + "</div>";
+    h += '<div class="meta">';
+    if (b.dateText) h += "<div>" + esc(b.dateText) + "</div>";
+    if (b.hours !== "" && b.hours != null) h += "<div>" + esc(b.hours) + " hour" + (b.hours == 1 ? "" : "s") + "</div>";
+    h += "<div>Charged: <b>" + money(b.charged) + "</b>";
+    if (b.promo) h += ' <span style="color:#d2b48c">(' + esc(b.promo) + ")</span>";
+    h += "</div></div>";
+    if (b.payLink) {
+      h += '<div class="acts">';
+      if (String(b.status).toLowerCase() !== "paid") h += '<a href="' + esc(b.payLink) + '" target="_blank" rel="noopener">Pay now</a>';
+      else h += '<a href="' + esc(b.payLink) + '" target="_blank" rel="noopener">Receipt</a>';
+      h += "</div>";
+    }
+    return h + "</div>";
+  }
+  function loadDashboard(){
+    var token = getToken();
+    if (!token) { show("pt-login"); return; }
+    post("portal_dashboard", {token: token}).then(function(d){
+      if (!(d && d.ok)) { setToken(null); show("pt-login"); return; }
+      var p = d.profile || {};
+      $("pt-hello").textContent = p.name ? "Welcome back, " + p.name + "." : "Welcome back.";
+      $("pt-sub").textContent = p.email || "";
+      $("pt-stat-sessions").textContent = d.stats.sessions;
+      $("pt-stat-paid").textContent = money(d.stats.totalPaid);
+      $("pt-name").value = p.name || "";
+      $("pt-phone").value = p.phone || "";
+      var fz = "";
+      if (d.founder) {
+        fz = '<div class="pt-credit"><div><div class="pt-label" style="margin:0 0 4px">Studio credit</div>' +
+             '<div class="meta" style="color:#aeb5bf;font-size:14px">Referral code: <span class="code">' + esc(d.founder.referralCode) + "</span></div></div>" +
+             '<div class="amt">' + money(d.founder.credit) + "</div></div>";
+      }
+      $("pt-founder").innerHTML = fz;
+      $("pt-upcoming").innerHTML = d.upcoming.length
+        ? d.upcoming.map(bookingCard).join("")
+        : '<div class="pt-empty">Nothing on the calendar — book your next session above.</div>';
+      $("pt-past").innerHTML = d.past.length
+        ? d.past.map(bookingCard).join("")
+        : '<div class="pt-empty">No past sessions yet.</div>';
+      show("pt-dash");
+    }).catch(function(){ setToken(null); show("pt-login"); });
+  }
+  $("pt-save").addEventListener("click", function(){
+    clearErr("pt-save-err"); $("pt-save-ok").style.display = "none";
+    var btn = $("pt-save"); btn.disabled = true; btn.textContent = "Saving...";
+    post("portal_updateProfile", {token: getToken(), name: $("pt-name").value, phone: $("pt-phone").value}).then(function(d){
+      btn.disabled = false; btn.textContent = "Save profile";
+      if (d && d.ok) {
+        $("pt-save-ok").style.display = "block";
+        if (d.profile && d.profile.name) $("pt-hello").textContent = "Welcome back, " + d.profile.name + ".";
+      } else if (d && d.error === "not signed in") { setToken(null); show("pt-login"); }
+      else { err("pt-save-err", (d && d.error) || "Couldn't save. Try again."); }
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = "Save profile";
+      err("pt-save-err", "Something didn't go through. Try again.");
+    });
+  });
+  $("pt-logout").addEventListener("click", function(){
+    var token = getToken();
+    setToken(null);
+    if (token) post("portal_logout", {token: token}).catch(function(){});
+    show("pt-login");
+  });
+  if (getToken()) loadDashboard();
+})();
+         
+
+                </script>
+  </div>
+</section>
+<style id="widget-theme">
+/* black / yellow / silver theme overrides */
+#aua-portal .pt-card{background:#0B0B0D;border-color:#6E7681;}
+#aua-portal h2{color:#FFC61A;}
+#aua-portal input[type=text],#aua-portal input[type=email],#aua-portal input[type=password],#aua-portal select,#aua-portal textarea{background:#131316;border-color:#6E7681;color:#F4EFE7;}
+#aua-portal input:focus,#aua-portal select:focus,#aua-portal textarea:focus{border-color:#FFC61A;}
+#aua-portal button{background:#FFC61A;color:#0B0B0D;font-weight:600;}
+#aua-portal button:hover{background:#FFD34D;}
+#aua-portal button.pt-ghost{background:transparent;border-color:#C0C6CE;color:#C0C6CE;}
+#aua-portal button.pt-ghost:hover{background:#17171B;}
+#aua-portal .pt-stat{background:#131316;border-color:#3A3F47;}
+#aua-portal .pt-stat .n{color:#FFC61A;}
+#aua-portal .pt-bk{background:#131316;border-color:#3A3F47;}
+#aua-portal .pt-pill.pending{color:#FFC61A;border-color:#FFC61A;}
+#aua-portal .pt-bk .acts a{color:#FFC61A;}
+#aua-portal .pt-credit{background:#131316;border-color:#FFC61A;}
+#aua-portal .pt-credit .amt{color:#FFC61A;}
+#aua-portal .pt-credit .code{color:#FFC61A;}
+#aua-portal .pt-empty{background:#131316;border-color:#3A3F47;color:#AEB5BF;}
+#aua-portal .pt-resend{color:#FFC61A;}
+</style>
+</main>
+<footer>
+  <div class="foot-giant" aria-hidden="true"><span>AMPED UP AUDIO</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">AMPED UP <span>AUDIO</span></a>
+        <p>Recording studio in El Monte, California. Real room, real engineer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client-portal.html">Client Portal</a>
+        <a href="call-us.html">Call Us</a>
+        <a href="book-a-call.html">Book a session</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/amped_up_audio" target="_blank" rel="noopener">Instagram — @amped_up_audio</a>
+        <a href="tel:+16266028481">Call or text — (626) 602-8481</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+      <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+      <a class="founders-quiet" href="founders.html">Founder's Pass</a>
+    </div>
+  </div>
+</footer>
+<script src="site.js?v=2"></script>
+<script src="stats.js?v=1" data-site="amped" defer></script>
+<script src="consent.js?v=1"></script>
+<script id="counterscale-script" data-site-id="ampedup-audio" src="https://counterscale.wsbelijah.workers.dev/tracker.js"></script>
+</body>
+</html>
