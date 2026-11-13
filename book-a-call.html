@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Session — AMPED UP AUDIO</title>
+  <meta name="description" content="Request a recording session at AMPED UP AUDIO in El Monte, CA. $40 Zelle deposit locks your time.">
+  <link rel="canonical" href="https://ampedup-audio.com/book-a-call">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="console.css?v=1">
+  <link rel="stylesheet" href="vendor/intlTelInput.min.css">
+<style>
+.dev-carry{background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.45);border-radius:14px;padding:14px 18px;margin:0 0 18px;font-size:.95rem;color:#F4F1E8}
+.dev-carry strong{color:#D9A441}
+</style>
+</head>
+<body>
+<div class="dev-banner" role="note">DEV PREVIEW — interactive concept build. Not the live site.</div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+<div id="progress" aria-hidden="true"></div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">AMPED UP <span>AUDIO</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="founders.html">Founder's Pass</a>
+      <a href="client-portal.html">Client Portal</a>
+      <a href="call-us.html">Call Us</a>
+      <a class="btn btn-blue" href="book-a-call.html">Book a session</a>
+    </div>
+  </div>
+</nav>
+<main>
+<section class="section page-top page-head">
+  <div class="container">
+    <p class="kicker reveal">Book</p>
+    <h1 class="section-title reveal">Request your session</h1>
+    <p class="section-sub reveal">Pick your service, name your day — the studio confirms your time, and a $40 Zelle deposit locks it.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+<div class="next-steps reveal">
+  <p class="next-steps-title">What happens next</p>
+  <div class="next-steps-grid">
+    <div class="next-step">
+      <span class="next-step-num">1</span>
+      <h3>Send your request</h3>
+      <p>Your time is held on the studio calendar.</p>
+    </div>
+    <div class="next-step">
+      <span class="next-step-num">2</span>
+      <h3>Deposit details come back to you</h3>
+      <p>A $40 Zelle deposit (your first hour) locks the session.</p>
+    </div>
+    <div class="next-step">
+      <span class="next-step-num">3</span>
+      <h3>Reminder text</h3>
+      <p>A reminder text lands 24 hours before your session.</p>
+    </div>
+  </div>
+</div>
+<section class="aua-booking" aria-labelledby="aua-booking-title"> <style>.aua-booking,.aua-booking *{box-sizing:border-box}
+.aua-booking{--aua-bg:#14243b;--aua-panel:#192c47;--aua-panel-2:#203654;--aua-border:#55657a;--aua-text:#f4efe7;--aua-muted:#aeb5bf;--aua-accent:#d2b48c;--aua-accent-2:#8b5a2b;--aua-success:#a8c3ae;--aua-error:#e1a5a0;color:var(--aua-text);background:radial-gradient(circle at 8% 0%,rgba(210,180,140,.18),transparent 30rem),linear-gradient(145deg,#14243b,#1a2e4a 62%,#122239);border:1px solid #4f6075;border-radius:24px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0 auto;max-width:880px;overflow:hidden;padding:clamp(22px,5vw,52px);position:relative;box-shadow:0 26px 70px rgba(8,20,39,.42)}
+.aua-booking::before{background:linear-gradient(90deg,transparent,var(--aua-accent),transparent);content:"";height:2px;left:0;position:absolute;right:0;top:0}
+.aua-booking__eyebrow{color:var(--aua-accent);font-size:12px;font-weight:800;letter-spacing:.2em;margin:0 0 12px;text-transform:uppercase}
+.aua-booking h2{font-size:clamp(31px,6vw,54px);letter-spacing:-.045em;line-height:.98;margin:0;max-width:720px}
+.aua-booking__intro{color:var(--aua-muted);font-size:16px;line-height:1.65;margin:18px 0 30px;max-width:680px}
+.aua-booking__grid{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.aua-booking__field{min-width:0}
+.aua-booking__field--full{grid-column:1/-1}
+.aua-booking label,.aua-booking legend{color:#eadfcf;display:block;font-size:13px;font-weight:750;letter-spacing:.02em;margin:0 0 8px}
+.aua-booking input,.aua-booking select,.aua-booking textarea{appearance:none;background:var(--aua-panel-2);border:1px solid var(--aua-border);border-radius:12px;color:var(--aua-text);font:inherit;min-height:50px;outline:none;padding:13px 14px;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;width:100%}
+.aua-booking select{background-image:linear-gradient(45deg,transparent 50%,#d2b48c 50%),linear-gradient(135deg,#d2b48c 50%,transparent 50%);background-position:calc(100% - 19px) 21px,calc(100% - 14px) 21px;background-repeat:no-repeat;background-size:5px 5px,5px 5px;padding-right:42px}
+.aua-booking input::placeholder,.aua-booking textarea::placeholder{color:#8791a0}
+.aua-booking input:focus,.aua-booking select:focus,.aua-booking textarea:focus{background:#263d5d;border-color:var(--aua-accent);box-shadow:0 0 0 3px rgba(210,180,140,.18)}
+.aua-booking textarea{min-height:126px;resize:vertical}
+.aua-booking__helper{color:var(--aua-muted);font-size:13px;line-height:1.55;margin:8px 0 0}
+.aua-booking__policy{background:rgba(210,180,140,.065);border:1px solid var(--aua-border);border-radius:14px;color:var(--aua-muted);font-size:13px;line-height:1.55;margin:24px 0 0;padding:15px 17px}
+.aua-booking__policy strong{color:var(--aua-text)}
+.aua-booking__footer{align-items:center;display:flex;gap:16px;justify-content:space-between;margin-top:20px}
+.aua-booking__status{flex:1;font-size:14px;line-height:1.45;margin:0;min-height:20px}
+.aua-booking__status[data-state="success"]{color:var(--aua-success)}
+.aua-booking__status[data-state="error"]{color:var(--aua-error)}
+.aua-booking button{align-items:center;background:linear-gradient(135deg,var(--aua-accent-2),var(--aua-accent));border:0;border-radius:999px;color:#122239;cursor:pointer;display:inline-flex;font:inherit;font-size:14px;font-weight:850;gap:10px;justify-content:center;min-height:50px;padding:0 24px;white-space:nowrap;box-shadow:0 12px 24px rgba(77,48,25,.28);transition:filter .18s ease,transform .18s ease,opacity .18s ease}
+.aua-booking button:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.aua-booking button:focus-visible{outline:3px solid rgba(210,180,140,.48);outline-offset:3px}
+.aua-booking button:disabled{cursor:not-allowed;opacity:.62;transform:none}
+.aua-booking__spinner{animation:aua-spin .75s linear infinite;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;display:none;height:16px;width:16px}
+.aua-booking button[aria-busy="true"] .aua-booking__spinner{display:inline-block}
+.aua-booking__hp{left:-9999px;position:absolute}
+.aua-booking .aua-booking__consent-label{align-items:flex-start;color:var(--aua-muted);cursor:pointer;display:flex;font-weight:500;gap:10px;letter-spacing:0;line-height:1.55}
+.aua-booking input.aua-booking__check{accent-color:var(--aua-accent);appearance:auto;background:transparent;flex:none;height:18px;margin:2px 0 0;min-height:18px;padding:0;width:18px}
+.aua-booking__consent a{color:var(--aua-accent)}
+@keyframes aua-spin{to{transform:rotate(360deg)}}
+@media (max-width:650px){.aua-booking{border-radius:18px}.aua-booking__grid{grid-template-columns:1fr}.aua-booking__field--full{grid-column:auto}.aua-booking__footer{align-items:stretch;flex-direction:column}.aua-booking button{width:100%}}
+.aua-booking .aua-avail[hidden]{display:none}
+.aua-booking__legend{color:#eadfcf;display:block;font-size:13px;font-weight:750;letter-spacing:.02em;margin:0 0 8px}
+.aua-avail{display:grid;gap:16px;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr)}
+.aua-booking .aua-cal{background:var(--aua-panel);border:1px solid var(--aua-border);border-radius:14px;padding:14px}
+.aua-booking .aua-cal__head{align-items:center;display:flex;justify-content:space-between;margin-bottom:10px}
+.aua-booking .aua-cal__nav{background:var(--aua-panel-2);border:1px solid var(--aua-border);border-radius:10px;color:var(--aua-text);cursor:pointer;font-size:18px;line-height:1;min-height:38px;padding:0 0 3px;width:40px}
+.aua-booking .aua-cal__nav:hover:not(:disabled){border-color:var(--aua-accent)}
+.aua-booking .aua-cal__nav:disabled{cursor:not-allowed;opacity:.35}
+.aua-cal__title{font-size:15px;font-weight:750}
+.aua-cal__dow,.aua-cal__grid{display:grid;gap:4px;grid-template-columns:repeat(7,minmax(0,1fr))}
+.aua-cal__dow span{color:var(--aua-muted);font-size:11px;font-weight:700;text-align:center;text-transform:uppercase}
+.aua-booking .aua-cal__day{background:transparent;border:1px solid transparent;border-radius:10px;color:var(--aua-text);cursor:pointer;font-size:13px;min-height:38px;padding:4px 0}
+.aua-booking .aua-cal__day:hover:not(:disabled){border-color:var(--aua-accent)}
+.aua-booking .aua-cal__day.is-today{color:var(--aua-accent);font-weight:800}
+.aua-booking .aua-cal__day.is-selected{background:rgba(210,180,140,.16);border-color:var(--aua-accent);font-weight:800}
+.aua-booking .aua-cal__day.is-blocked{background:rgba(120,130,145,.12);color:#6b7482;text-decoration:line-through}
+.aua-booking .aua-cal__day:disabled{cursor:not-allowed}
+.aua-booking .aua-cal__day.is-empty{background:none;border:0;cursor:default;visibility:hidden}
+.aua-booking .aua-slots{background:var(--aua-panel);border:1px solid var(--aua-border);border-radius:14px;display:flex;flex-direction:column;max-height:352px;min-height:200px;padding:14px}
+.aua-slots__title{color:var(--aua-muted);font-size:13px;font-weight:700;margin:0 0 10px}
+.aua-booking .aua-slots__grid{align-content:start;display:grid;flex:1;gap:8px;grid-template-columns:repeat(3,minmax(0,1fr));overflow-y:auto}
+.aua-booking .aua-slot{background:var(--aua-panel-2);border:1px solid var(--aua-border);border-radius:10px;color:var(--aua-text);cursor:pointer;font-size:13px;min-height:42px;padding:6px 4px}
+.aua-booking .aua-slot:hover:not(:disabled){border-color:var(--aua-accent)}
+.aua-booking .aua-slot.is-selected{background:rgba(210,180,140,.16);border-color:var(--aua-accent);font-weight:800}
+.aua-booking .aua-slot:disabled{background:rgba(120,130,145,.10);border:0;color:#6b7482;cursor:not-allowed;text-decoration:line-through}
+.aua-booking .aua-slot.is-booked{text-decoration:line-through;text-decoration-color:#f5c518;text-decoration-thickness:2px}.aua-avail__loading{color:var(--aua-muted);font-size:13px;grid-column:1/-1;padding:12px 0}
+@media (max-width:650px){.aua-avail{grid-template-columns:1fr}}.iti .iti__selected-country{background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important;padding:0 6px 0 10px!important;min-height:0!important}.iti .iti__selected-dial-code{color:#f4efe7!important;font-weight:600}.iti input#aua-phone{padding-left:96px!important}.iti{width:100%}</style> 
+ <p class="aua-booking__eyebrow">El Monte, California &middot; Open 7 days a week, late nights included</p> 
+ <h2 id="aua-booking-title">AMPED UP AUDIO<br/>Booking Request</h2> 
+ <p class="aua-booking__intro">Tell us what you need and when you want to work. This is a request&mdash;not a confirmed appointment. The studio will follow up with availability and deposit details.</p> 
+ <div class="dev-carry" id="devCarry" hidden></div>
+ <form id="aua-booking-form" novalidate="" action=""> <div class="aua-booking__grid"> <div class="aua-booking__field"> <label for="aua-name">Full name *</label> 
+<input id="aua-name" name="full_name" type="text" autocomplete="name" placeholder="Your name" required="" data-placeholder-original="Your name"/></div> 
+ <div class="aua-booking__field"> <label for="aua-email">Email *</label> 
+<input id="aua-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required=""/></div> 
+ <div class="aua-booking__field aua-booking__field--full"> <label for="aua-phone">Phone *</label> 
+<input id="aua-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required=""/></div> 
+ <div class="aua-booking__field aua-booking__field--full"> <label for="aua-service">Service *</label> 
+ <select id="aua-service" name="service" required=""> <option value="" selected="" disabled="">Select a service</option> 
+ <option>Recording Session &mdash; $40/hour (with engineer)</option> 
+ <option>2-Track Mix &mdash; $100 flat</option> 
+ <option>Full Stem Mix &mdash; $150 flat</option> 
+ <option>Other</option> 
+</select> 
+</div> 
+ <div class="aua-booking__field aua-booking__field--full"> <span class="aua-booking__legend" id="aua-avail-legend">Preferred date &amp; time *</span> 
+ <p class="aua-booking__helper">Greyed-out times are blocked on Elijah's calendar &mdash; a yellow line through a time means it's a booked session. Pick anything else.</p> 
+ <div class="aua-avail" id="aua-avail"> <div class="aua-cal"> <div class="aua-cal__head"> <button type="button" class="aua-cal__nav" id="aua-cal-prev" aria-label="Previous month">&lsaquo;</button> 
+ <span class="aua-cal__title" id="aua-cal-title" aria-live="polite"></span> 
+ <button type="button" class="aua-cal__nav" id="aua-cal-next" aria-label="Next month">&rsaquo;</button> 
+</div> 
+ <div class="aua-cal__dow" aria-hidden="true"> <span>Su</span> 
+ <span>Mo</span> 
+ <span>Tu</span> 
+ <span>We</span> 
+ <span>Th</span> 
+ <span>Fr</span> 
+ <span>Sa</span> 
+</div> 
+ <div class="aua-cal__grid" id="aua-cal-grid" role="group" aria-labelledby="aua-avail-legend"></div> 
+</div> 
+ <div class="aua-slots"> <p class="aua-slots__title" id="aua-slots-title">Select a day to see open times</p> 
+ <div class="aua-slots__grid" id="aua-slots-grid"></div> 
+</div> 
+</div> 
+ <div id="aua-avail-fallback" hidden=""> <label for="aua-date-fb">Preferred date *</label> 
+<input id="aua-date-fb" type="date"/> <label for="aua-time-fb" style="margin-top:12px">Preferred start time *</label> 
+<input id="aua-time-fb" type="time"/></div> 
+<input type="hidden" id="aua-date" name="preferred_date" value=""/><input type="hidden" id="aua-time" name="preferred_start_time" value=""/></div> 
+ <div class="aua-booking__field aua-booking__field--full"> <label for="aua-length">Session length *</label> 
+ <select id="aua-length" name="session_length" required=""> <option value="" selected="" disabled="">Select a length</option> 
+ <option>1 hour</option> 
+ <option>2 hours</option> 
+ <option>3 hours</option> 
+ <option>4+ hours</option> 
+</select> 
+</div> 
+ <div class="aua-booking__field aua-booking__field--full"> <label for="aua-notes">Notes</label> 
+ <textarea id="aua-notes" name="notes" placeholder="Project details, number of songs, special setup, or anything else we should know." data-placeholder-original="Project details, number of songs, special setup, or anything else we should know."></textarea> 
+</div> 
+ <div class="aua-booking__field aua-booking__field--full"> <label for="aua-promo">Promo / referral code (optional)</label> 
+<input id="aua-promo" name="promo_code" type="text" autocomplete="off" placeholder="Enter your code" aria-describedby="aua-promo-help" data-placeholder-original="Enter your code"/> <p class="aua-booking__helper" id="aua-promo-help">Have a founder referral code? Enter it here for 10% off recording sessions.</p> 
+</div> 
+ <div class="aua-booking__field aua-booking__field--full aua-booking__consent"> <label class="aua-booking__consent-label" for="aua-sms-consent"><input class="aua-booking__check" id="aua-sms-consent" name="sms_consent" type="checkbox" value="yes"/> <span>Text me about my booking. Elistudios LLC may send texts about this booking &mdash; confirmations, reminders, and follow-ups. Message frequency varies. Message and data rates may apply. Reply STOP to end or HELP for help. Consent is not a condition of booking. <a href="/privacy">Privacy policy</a> &middot; <a href="/terms">Terms of service</a></span></label> 
+</div> 
+ <div class="aua-booking__hp" aria-hidden="true"> <label for="aua-company">Company</label> 
+<input id="aua-company" name="_honey" type="text" tabindex="-1" autocomplete="off"/></div> 
+</div> 
+ <p class="aua-booking__policy"> <strong>Booking policy:</strong> 
+A $40 deposit (the first recording hour) is required to lock in a recording session. A 20-minute grace period applies; arrivals after that are subject to a $20 late fee.</p> 
+ <div class="aua-booking__footer"> <p id="aua-booking-status" class="aua-booking__status" role="status" aria-live="polite"></p> 
+ <button id="aua-booking-submit" type="submit"> <span class="aua-booking__spinner" aria-hidden="true"></span> 
+ <span class="aua-booking__button-text">Send booking request</span> 
+</button> 
+</div> 
+</form> 
+ <script>
+
+
+   (()=>{const form=document.getElementById('aua-booking-form');const submitButton=document.getElementById('aua-booking-submit');const buttonText=submitButton.querySelector('.aua-booking__button-text');const status=document.getElementById('aua-booking-status');const dateHidden=document.getElementById('aua-date');const timeHidden=document.getElementById('aua-time');const lengthSelect=document.getElementById('aua-length');let inFlight=false;const EXEC_URL='https://script.google.com/macros/s/AKfycbyVQ0IWJ0U1IXKyTG86UXuxpxg11nq9YLEhtItTydK1eJXDpMUpzSIBKrmTs3nu356Wkw/exec';const TZ='America/Los_Angeles';const SLOT_MS=1800000;const MAX_AHEAD=3;const busyCache={};let availOK=true,availFailed=false,selectedDate='',selectedMs=0;const pad2=n=>String(n).padStart(2,'0');function laDateStr(d){const p={};new Intl.DateTimeFormat('en-US',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(d).forEach(x=>p[x.type]=x.value);return p.year+'-'+p.month+'-'+p.day;}const todayStr=laDateStr(new Date());function laOffsetMin(y,mo,d){const probe=new Date(Date.UTC(y,mo-1,d,0,0,0));const p={};new Intl.DateTimeFormat('en-US',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(probe).forEach(x=>p[x.type]=x.value);const asLA=Date.UTC(+p.year,+p.month-1,+p.day,(+p.hour)%24,+p.minute);return Math.round((asLA-probe.getTime())/60000);}function dayBounds(ds){const y=+ds.slice(0,4),mo=+ds.slice(5,7),d=+ds.slice(8,10);const start=Date.UTC(y,mo-1,d)-laOffsetMin(y,mo,d)*60000;const nd=new Date(Date.UTC(y,mo-1,d+1));const ny=nd.getUTCFullYear(),nm=nd.getUTCMonth()+1,ndd=nd.getUTCDate();const end=Date.UTC(ny,nm-1,ndd)-laOffsetMin(ny,nm,ndd)*60000;return[start,end];}async function ensureMonth(y,mo){const key=y+'-'+pad2(mo);if(busyCache[key])return busyCache[key];const lastDay=new Date(Date.UTC(y,mo,0)).getUTCDate();const s=dayBounds(key+'-01')[0]-86400000;const e=dayBounds(key+'-'+pad2(lastDay))[1]+86400000;const r=await fetch(EXEC_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({action:'portal_availability',start:new Date(s).toISOString(),end:new Date(e).toISOString()})});const data=await r.json();if(!data||!data.ok)throw new Error('availability failed');const ranges=(data.busy||[]).map(b=>[Date.parse(b.s),Date.parse(b.e),b.k==='booking']).filter(x=>!isNaN(x[0])&&!isNaN(x[1]));busyCache[key]=ranges;return ranges;}
+function slotsFor(ds){const ranges=busyCache[ds.slice(0,7)]||[];const b=dayBounds(ds),now=Date.now(),out=[];for(let t=b[0];t<b[1];t+=SLOT_MS){const busy=ranges.some(r=>t<r[1]&&r[0]<t+SLOT_MS);const booked=ranges.some(r=>r[2]&&t<r[1]&&r[0]<t+SLOT_MS);out.push({t:t,busy:busy||(t+SLOT_MS<=now),booked:booked});}return out;}const fmtTime=ms=>new Intl.DateTimeFormat('en-US',{timeZone:TZ,hour:'numeric',minute:'2-digit',hour12:true}).format(new Date(ms));function fmtVal(ms){const p={};new Intl.DateTimeFormat('en-US',{timeZone:TZ,hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date(ms)).forEach(x=>p[x.type]=x.value);return(p.hour==='24'?'00':p.hour)+':'+p.minute;}function dayName(ds){return new Intl.DateTimeFormat('en-US',{timeZone:TZ,weekday:'long',month:'long',day:'numeric'}).format(new Date(dayBounds(ds)[0]));}const calTitle=document.getElementById('aua-cal-title'),calGrid=document.getElementById('aua-cal-grid'),prevBtn=document.getElementById('aua-cal-prev'),nextBtn=document.getElementById('aua-cal-next'),slotsTitle=document.getElementById('aua-slots-title'),slotsGrid=document.getElementById('aua-slots-grid');const ty=+todayStr.slice(0,4),tm=+todayStr.slice(5,7);let vy=ty,vm=tm;function monthLabel(y,mo){return new Intl.DateTimeFormat('en-US',{month:'long',year:'numeric'}).format(new Date(Date.UTC(y,mo-1,15)));}async function renderCal(){calTitle.textContent=monthLabel(vy,vm);prevBtn.disabled=(vy===ty&&vm===tm);nextBtn.disabled=((vy-ty)*12+(vm-tm))>=MAX_AHEAD;const key=vy+'-'+pad2(vm);if(!busyCache[key])calGrid.innerHTML='<div class="aua-avail__loading">Checking availability&hellip;</div>';try{await ensureMonth(vy,vm);}catch(err){useFallback();return;}calGrid.innerHTML='';const firstDow=new Date(Date.UTC(vy,vm-1,1)).getUTCDay();for(let i=0;i<firstDow;i++){const sp=document.createElement('span');sp.className='aua-cal__day is-empty';sp.setAttribute('aria-hidden','true');calGrid.appendChild(sp);}const lastDay=new Date(Date.UTC(vy,vm,0)).getUTCDate();for(let d=1;d<=lastDay;d++){const ds=vy+'-'+pad2(vm)+'-'+pad2(d);const btn=document.createElement('button');btn.type='button';btn.className='aua-cal__day';btn.textContent=d;btn.setAttribute('aria-label',dayName(ds));if(ds===todayStr)btn.classList.add('is-today');if(ds===selectedDate){btn.classList.add('is-selected');btn.setAttribute('aria-pressed','true');}if(ds<todayStr){btn.disabled=true;}else{const open=slotsFor(ds).some(s=>!s.busy);if(!open){btn.disabled=true;btn.classList.add('is-blocked');btn.title='Fully booked';}else{btn.addEventListener('click',()=>selectDate(ds));}}calGrid.appendChild(btn);}}function selectDate(ds){selectedDate=ds;selectedMs=0;dateHidden.value=ds;timeHidden.value='';renderCal();renderSlots();}
+function renderSlots(){slotsGrid.innerHTML='';if(!selectedDate){slotsTitle.textContent='Select a day to see open times';return;}slotsTitle.textContent='Open times \u2014 '+dayName(selectedDate);let any=false;slotsFor(selectedDate).forEach(s=>{const b=document.createElement('button');b.type='button';b.className='aua-slot';b.textContent=fmtTime(s.t);if(s.busy){b.disabled=true;if(s.booked){b.classList.add('is-booked');b.title='Booked \u2014 session in progress';}else{b.title='Already booked';}}else{any=true;b.setAttribute('aria-label','Book '+fmtTime(s.t));b.addEventListener('click',()=>{selectedMs=s.t;timeHidden.value=fmtVal(s.t);slotsGrid.querySelectorAll('.aua-slot').forEach(x=>{x.classList.remove('is-selected');x.removeAttribute('aria-pressed','true');});b.classList.add('is-selected');b.setAttribute('aria-pressed','true');});}slotsGrid.appendChild(b);});if(!any)slotsTitle.textContent='No open times that day \u2014 pick another.';}function useFallback(){if(availFailed)return;availFailed=true;availOK=false;document.getElementById('aua-avail').hidden=true;const fb=document.getElementById('aua-avail-fallback');fb.hidden=false;const dFb=document.getElementById('aua-date-fb'),tFb=document.getElementById('aua-time-fb');dFb.min=todayStr;dFb.required=true;tFb.required=true;dFb.addEventListener('input',()=>{dateHidden.value=dFb.value;});tFb.addEventListener('input',()=>{timeHidden.value=tFb.value;});}prevBtn.addEventListener('click',()=>{if(vy===ty&&vm===tm)return;vm--;if(vm<1){vm=12;vy--;}renderCal();});nextBtn.addEventListener('click',()=>{if(((vy-ty)*12+(vm-tm))>=MAX_AHEAD)return;vm++;if(vm>12){vm=1;vy++;}renderCal();});form.addEventListener('submit',async(event)=>{event.preventDefault();if(inFlight)return;if(!form.checkValidity()){form.reportValidity();status.dataset.state='error';status.textContent='Please complete all required fields.';return;}if(window.__fcPhone&&!window.__fcPhone.isValidNumber()){status.dataset.state='error';status.textContent='Please enter a valid phone number — we text booking updates to it.';return;}var _em=document.getElementById('aua-email').value;if(window.MailChecker&&!MailChecker.isValid(_em)){status.dataset.state='error';status.textContent='That email looks temporary or disposable — please use a real email so we can send your session details.';return;}if(!dateHidden.value||!timeHidden.value){status.dataset.state='error';status.textContent=availOK?'Please pick an open day and time above.':'Please pick a date and time.';return;}if(availOK&&selectedMs){const lenH=parseInt(lengthSelect.value,10)||1;const ranges=busyCache[selectedDate.slice(0,7)]||[];const eMs=selectedMs+lenH*3600000;if(ranges.some(r=>selectedMs<r[1]&&r[0]<eMs)){status.dataset.state='error';status.textContent='That session would run into a blocked time \u2014 please pick an earlier start or a shorter session.';return;}}inFlight=true;submitButton.disabled=true;submitButton.setAttribute('aria-busy','true');buttonText.textContent='Sending\u2026';status.dataset.state='';status.textContent='';const payload=Object.fromEntries(new FormData(form).entries());if(window.__fcPhone&&window.__fcPhone.isValidNumber()){payload.phone=window.__fcPhone.getNumber();}payload._subject='New Booking Request \u2014 AMPED UP AUDIO';payload._captcha='false';payload.action='booking_request';async function sendViaScript(){const r=await fetch(EXEC_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});const d=await r.json().catch(()=>null);if(!d||!d.ok)throw new Error('Script send failed');}async function sendViaFormSubmit(){const r=await fetch('https://formsubmit.co/ajax/Eli.otl.music@gmail.com',{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload)});if(!r.ok)throw new Error('Request failed');const d=await r.json().catch(()=>null);if(d&&d.success==='false')throw new Error('Request failed');}try{try{await sendViaScript();}catch(scriptErr){await sendViaFormSubmit();}try{var _sv=payload.service||'';var _sg=_sv.indexOf('Recording')===0?'recording':_sv.indexOf('2-Track')===0?'2track-mix':_sv.indexOf('Full Stem')===0?'stem-mix':_sv.indexOf('Other')===0?'other':'unspecified';new Image().src='https://counterscale.wsbelijah.workers.dev/collect?sid=ampedup-audio&h='+encodeURIComponent('https://ampedup-audio.com')+'&p='+encodeURIComponent('/booking-submitted/'+_sg)+'&r=';}catch(_e){}form.reset();selectedDate='';selectedMs=0;slotsGrid.innerHTML='';slotsTitle.textContent='Select a day to see open times';vy=ty;vm=tm;renderCal();status.dataset.state='success';status.textContent='Request received \u2014 Elijah will confirm your session and send deposit details.';}catch(error){status.dataset.state='error';status.textContent='We couldn\u2019t send your request. Please try again in a moment.'}finally{inFlight=false;submitButton.disabled=false;submitButton.setAttribute('aria-busy','false');buttonText.textContent='Send booking request'}});renderCal();})();
+            
+
+                  </script> 
+</section>
+    <div class="cta-band reveal">
+      <a class="btn btn-ghost" href="call-us.html">Prefer to talk it through first? Book a call instead</a>
+    </div>
+  </div>
+</section>
+<style id="widget-theme">
+/* black / yellow / silver theme overrides */
+.aua-booking{--aua-bg:#0B0B0D;--aua-panel:#101013;--aua-panel-2:#17171B;--aua-border:#6E7681;--aua-text:#F4EFE7;--aua-muted:#AEB5BF;--aua-accent:#FFC61A;--aua-accent-2:#FFB800;}
+.aua-booking select{background-image:linear-gradient(45deg,transparent 50%,#FFC61A 50%),linear-gradient(135deg,#FFC61A 50%,transparent 50%);}
+.aua-booking{background:radial-gradient(430px circle at var(--mx,50%) var(--my,-30%),rgba(255,216,100,.13),rgba(255,255,255,.045) 34%,transparent 64%),radial-gradient(circle at 8% 0%,rgba(255,198,26,.08),transparent 30rem),linear-gradient(180deg,#101013,#0B0B0D);border-color:#3A3F47;box-shadow:0 26px 70px rgba(0,0,0,.5);}
+.aua-booking input:focus,.aua-booking select:focus,.aua-booking textarea:focus{background:#17171B;}
+.aua-booking .aua-cal__day.is-selected,.aua-booking .aua-slot.is-selected{background:rgba(255,198,26,.18);}
+.aua-booking__policy{background:rgba(255,198,26,.06);}
+
+/* interactive shimmer (Oct 13, 2026) */
+.aua-booking button{position:relative;overflow:hidden;}
+.aua-booking button::after{content:"";position:absolute;top:0;bottom:0;left:0;width:55%;pointer-events:none;background:linear-gradient(115deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-190%) skewX(-14deg);}
+.aua-booking button:hover::after{transform:translateX(320%) skewX(-14deg);transition:transform .85s ease;}
+</style>
+</main>
+<footer>
+  <div class="foot-giant" aria-hidden="true"><span>AMPED UP AUDIO</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">AMPED UP <span>AUDIO</span></a>
+        <p>Recording studio in El Monte, California. Real room, real engineer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client-portal.html">Client Portal</a>
+        <a href="call-us.html">Call Us</a>
+        <a href="book-a-call.html">Book a session</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/amped_up_audio" target="_blank" rel="noopener">Instagram — @amped_up_audio</a>
+        <a href="tel:+16266028481">Call or text — (626) 602-8481</a>
+        <a href="/review">Leave a review</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+      <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+      <a class="founders-quiet" href="founders.html">Founder's Pass</a>
+    </div>
+  </div>
+</footer>
+<script src="site.js?v=2"></script>
+
+<script>
+(function(){
+  var card = document.querySelector('.aua-booking');
+  if(!card) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var tx = 0.5, ty = -0.3, cx = tx, cy = ty, active = false, last = 0;
+  function setTarget(e){
+    var r = card.getBoundingClientRect();
+    tx = (e.clientX - r.left) / r.width; ty = (e.clientY - r.top) / r.height;
+    active = true; last = performance.now();
+  }
+  card.addEventListener('pointermove', setTarget, {passive:true});
+  card.addEventListener('pointerdown', setTarget, {passive:true});
+  card.addEventListener('pointerleave', function(){ active = false; });
+  (function loop(t){
+    if(!active && t - last > 2500){ /* idle drift so touch screens get life too */
+      tx = 0.5 + 0.38 * Math.sin(t * 0.00021);
+      ty = 0.28 + 0.22 * Math.cos(t * 0.00016);
+    }
+    cx += (tx - cx) * 0.06; cy += (ty - cy) * 0.06;
+    card.style.setProperty('--mx', (cx * 100).toFixed(2) + '%');
+    card.style.setProperty('--my', (cy * 100).toFixed(2) + '%');
+    requestAnimationFrame(loop);
+  })(performance.now());
+})();
+</script>
+<script src="consent.js?v=1"></script>
+<script src="vendor/intlTelInputWithUtils.min.js"></script>
+<script src="vendor/mailchecker.bundle.js"></script>
+<script src="form-cleaners.js"></script>
+
+<script>
+/* DEV BUILD ONLY — carry the homepage console build into this form
+   (preselect + visible summary) and disable real submission. */
+(function () {
+  window.addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var st = document.getElementById('aua-booking-status');
+    if (st) { st.textContent = 'DEV PREVIEW — submissions are disabled on this copy. Nothing was sent.'; }
+  }, true);
+
+  var q = new URLSearchParams(location.search);
+  var svc = q.get('service');
+  if (!svc) return;
+  var labels = { recording: 'Recording — with engineer', twotrack: '2-Track Mix', stem: 'Full Stem Mix' };
+  var prefixes = { recording: 'Recording', twotrack: '2-Track', stem: 'Full Stem' };
+  if (!labels[svc]) return;
+
+  var sel = document.getElementById('aua-service');
+  if (sel) {
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text.indexOf(prefixes[svc]) === 0) { sel.selectedIndex = i; break; }
+    }
+    sel.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+  var hours = parseInt(q.get('hours') || '', 10);
+  var lenSel = document.getElementById('aua-length');
+  if (lenSel && hours) {
+    var want = hours >= 4 ? '4+ hours' : hours + (hours === 1 ? ' hour' : ' hours');
+    for (var j = 0; j < lenSel.options.length; j++) {
+      if (lenSel.options[j].text === want) { lenSel.selectedIndex = j; break; }
+    }
+    lenSel.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+  var box = document.getElementById('devCarry');
+  if (box) {
+    var parts = ['<strong>Your build from the homepage:</strong> ' + labels[svc]];
+    if (hours) parts.push(hours + (hours === 1 ? ' hour' : ' hours'));
+    if (q.get('total')) parts.push('Total $' + q.get('total'));
+    if (q.get('deposit')) parts.push('Deposit $' + q.get('deposit') + ' (Zelle)');
+    box.innerHTML = parts.join(' · ') + ' — already filled in below.';
+    box.hidden = false;
+  }
+})();
+</script>
+</body>
+
+</html>
