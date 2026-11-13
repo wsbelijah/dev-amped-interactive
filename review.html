@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave a Review — AMPED UP AUDIO</title>
+  <meta name="description" content="Review AMPED UP AUDIO in El Monte, CA on Google, or send feedback straight to Elijah.">
+  <link rel="canonical" href="https://ampedup-audio.com/review">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <style>
+    /* NFC tap landing (Oct 19, 2026) */
+    .tap-card { text-align: center; padding: 40px 28px; }
+    .tap-stars { font-size: 44px; letter-spacing: 8px; color: #D9A441; line-height: 1; margin-bottom: 18px; }
+    .tap-btn { display: block; width: 100%; max-width: 420px; margin: 22px auto 0; padding: 16px 24px; font-size: 17px; }
+    .tap-note { margin-top: 14px; font-size: 13.5px; opacity: .75; }
+    .tap-book { text-align: center; margin-top: 28px; font-size: 15.5px; }
+    .tap-book a { color: #D9A441; font-weight: 600; }
+    @media (max-width: 480px) { .tap-stars { font-size: 36px; letter-spacing: 6px; } }
+  </style>
+  <script>
+    /* AMPED_REVIEW_URL — the studio's official Google review short link
+       (from Google Business Profile > "Ask for reviews"). */
+    window.AMPED_REVIEW_URL = "https://g.page/r/Cd2OzxvqAZknEBM/review";
+  </script>
+  <link rel="prefetch" href="book-a-call.html">
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+<div id="progress" aria-hidden="true"></div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">AMPED UP <span>AUDIO</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="founders.html">Founder's Pass</a>
+      <a href="client-portal.html">Client Portal</a>
+      <a href="call-us.html">Call Us</a>
+      <a class="btn btn-blue" href="book-a-call.html">Book a session</a>
+    </div>
+  </div>
+</nav>
+<main>
+<section class="section page-top page-head">
+  <div class="container">
+    <p class="kicker reveal">Reviews</p>
+    <h1 class="section-title reveal">How was your session?</h1>
+    <p class="section-sub reveal">Tapped the pad at the studio? You're in the right place. Thirty seconds on Google is how the next artist finds this room.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <article class="review-card tap-card reveal">
+      <div class="tap-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <h2>Put it on Google</h2>
+      <p>Public reviews are how new artists find this studio. If the session earned it, say it where it counts &mdash; one tap opens the studio's Google listing, and you take it from there.</p>
+      <a class="btn btn-accent tap-btn" id="google-review-link" href="https://g.page/r/Cd2OzxvqAZknEBM/review" target="_blank" rel="noopener">Review us on Google</a>
+      <p class="tap-note">Opens Google &mdash; pick your stars, write a line or two, done.</p>
+    </article>
+
+    <article class="review-card reveal" style="margin-top:24px">
+      <h2>Rather tell Elijah directly?</h2>
+      <p>Private. This goes straight to Elijah's inbox and is not posted anywhere. Good, bad, or in between &mdash; it gets read, and Elijah uses it on the next session.</p>
+      <form class="review-form" id="review-feedback-form">
+        <div class="review-form__field">
+          <label for="review-name">Name (optional)</label>
+          <input id="review-name" name="full_name" type="text" autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="review-form__field">
+          <label for="review-message">Your feedback *</label>
+          <textarea id="review-message" name="message" placeholder="How did the session go? What should the studio hear?" required></textarea>
+        </div>
+        <div class="review-form__hp" aria-hidden="true">
+          <label for="review-company">Company</label>
+          <input id="review-company" name="_honey" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="review-form__status" id="review-status" role="status" aria-live="polite"></p>
+        <button class="btn btn-accent" id="review-submit" type="submit">Send feedback</button>
+      </form>
+    </article>
+
+    <p class="tap-book reveal">Back for more? <a href="book-a-call.html">Book your next session &rarr;</a></p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="foot-giant" aria-hidden="true"><span>AMPED UP AUDIO</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">AMPED UP <span>AUDIO</span></a>
+        <p>Recording studio in El Monte, California. Real room, real engineer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client-portal.html">Client Portal</a>
+        <a href="call-us.html">Call Us</a>
+        <a href="book-a-call.html">Book a session</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/amped_up_audio" target="_blank" rel="noopener">Instagram — @amped_up_audio</a>
+        <a href="tel:+16266028481">Call or text — (626) 602-8481</a>
+        <a href="/review">Leave a review</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+      <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+      <a class="founders-quiet" href="founders.html">Founder's Pass</a>
+    </div>
+  </div>
+</footer>
+<script src="site.js?v=2"></script>
+<script>
+  (function () {
+    var link = document.getElementById("google-review-link");
+    if (link && window.AMPED_REVIEW_URL) link.href = window.AMPED_REVIEW_URL;
+
+    var form = document.getElementById("review-feedback-form");
+    var status = document.getElementById("review-status");
+    var submitBtn = document.getElementById("review-submit");
+    var honey = document.getElementById("review-company");
+    var inFlight = false;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (inFlight) return;
+      if (honey && honey.value) {
+        status.dataset.state = "success";
+        status.textContent = "Got it \u2014 your note went straight to Elijah's inbox. Nothing gets posted publicly.";
+        form.reset();
+        return;
+      }
+      inFlight = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending\u2026";
+      status.removeAttribute("data-state");
+      status.textContent = "";
+      var payload = {
+        full_name: document.getElementById("review-name").value.trim(),
+        message: document.getElementById("review-message").value.trim(),
+        _subject: "Website Feedback \u2014 AMPED UP AUDIO",
+        _captcha: "false",
+        _honey: ""
+      };
+      fetch("https://formsubmit.co/ajax/Eli.otl.music@gmail.com", {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(function (response) {
+        if (!response.ok) throw new Error("Request failed");
+        return response.json().catch(function () { return null; });
+      }).then(function (data) {
+        if (data && data.success === "false") throw new Error("Request failed");
+        status.dataset.state = "success";
+        status.textContent = "Got it \u2014 your note went straight to Elijah's inbox. Nothing gets posted publicly.";
+        form.reset();
+      }).catch(function () {
+        status.dataset.state = "error";
+        status.textContent = "That did not go through. Check your connection and try again.";
+      }).finally(function () {
+        inFlight = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send feedback";
+      });
+    });
+  })();
+</script>
+<script src="stats.js?v=1" data-site="amped" defer></script>
+<script src="consent.js?v=1"></script>
+<script id="counterscale-script" data-site-id="ampedup-audio" src="https://counterscale.wsbelijah.workers.dev/tracker.js"></script>
+</body>
+</html>
