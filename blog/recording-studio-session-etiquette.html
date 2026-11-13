@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recording Studio Session Etiquette: How to Get the Most From Your Time</title>
+  <meta name="description" content="Recording studio session etiquette — arriving ready, respecting the clock, communicating with the engineer, and keeping the room focused — from AMPED UP AUDIO in El Monte, where recording is $40/hr with an engineer.">
+  <link rel="canonical" href="https://ampedup-audio.com/blog/recording-studio-session-etiquette">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Recording Studio Session Etiquette: How to Get the Most From Your Time">
+  <meta property="og:description" content="Recording studio session etiquette — arriving ready, respecting the clock, communicating with the engineer, and keeping the room focused — from AMPED UP AUDIO in El Monte, where recording is $40/hr with an engineer.">
+  <meta property="og:url" content="https://ampedup-audio.com/blog/recording-studio-session-etiquette">
+  <meta property="og:image" content="https://ampedup-audio.com/assets/gallery/10d2c8a48dd520913fba4ab052ec2fa11d2d24f915cd23ca7c4b538a9b8b79fb.jpg">
+  <meta property="article:published_time" content="2026-11-09">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=14">
+  <link rel="stylesheet" href="../blog.css?v=1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Recording Studio Session Etiquette: How to Get the Most From Your Time",
+    "description": "Recording studio session etiquette — arriving ready, respecting the clock, communicating with the engineer, and keeping the room focused — from AMPED UP AUDIO in El Monte, where recording is $40/hr with an engineer.",
+    "url": "https://ampedup-audio.com/blog/recording-studio-session-etiquette",
+    "image": "https://ampedup-audio.com/assets/gallery/10d2c8a48dd520913fba4ab052ec2fa11d2d24f915cd23ca7c4b538a9b8b79fb.jpg",
+    "author": { "@type": "Organization", "name": "AMPED UP AUDIO", "url": "https://ampedup-audio.com" },
+    "publisher": { "@type": "Organization", "name": "AMPED UP AUDIO", "url": "https://ampedup-audio.com" },
+    "datePublished": "2026-11-09"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is good etiquette for a recording studio session?", "acceptedAnswer": { "@type": "Answer", "text": "Arrive on time and ready to work, bring your files and lyrics prepared, communicate clearly with the engineer, keep extra guests and distractions to a minimum, and respect the time you booked. At AMPED UP AUDIO, recording is $40/hr with an engineer included, so good etiquette is really about making sure that time goes into takes." } },
+      { "@type": "Question", "name": "Can I bring guests to a recording session?", "acceptedAnswer": { "@type": "Answer", "text": "If you want to bring someone, check with the studio when you book and keep the group small. People who are part of the song or the decision-making help a session; a crowded, distracted room usually slows it down. When in doubt, ask first rather than arriving with extra people unannounced." } },
+      { "@type": "Question", "name": "How much does recording and mixing cost at AMPED UP AUDIO?", "acceptedAnswer": { "@type": "Answer", "text": "Recording at AMPED UP AUDIO is $40/hr with an engineer included — stated as $40/hour with engineer. Mixing is a separate flat service afterwards: $100 for a 2-track mix and $150 for a full stem mix." } },
+      { "@type": "Question", "name": "How does booking and the deposit work?", "acceptedAnswer": { "@type": "Answer", "text": "Send a request on the booking page with your service, day, and start time. The studio checks the calendar and confirms your time with you directly — a request is not a confirmed appointment. A $40 deposit via Zelle, which is your first hour, then locks the confirmed session." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+<div id="progress" aria-hidden="true"></div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">AMPED UP <span>AUDIO</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="../services.html">Services</a>
+      <a href="../portfolio.html">Portfolio</a>
+      <a href="../founders.html">Founder's Pass</a>
+      <a href="../client-portal.html">Client Portal</a>
+      <a href="../call-us.html">Call Us</a>
+      <a class="btn btn-blue" href="../book-a-call.html">Book a session</a>
+    </div>
+  </div>
+</nav>
+<main>
+<article>
+<section class="section page-top page-head">
+  <div class="article-wrap">
+    <p class="kicker reveal">Session Guide &middot; El Monte, California</p>
+    <h1 class="section-title reveal">Recording Studio Session Etiquette: How to Get the Most From Your Time</h1>
+    <p class="article-meta reveal">By <strong>AMPED UP AUDIO</strong> &middot; November 9, 2026</p>
+    <figure class="article-hero reveal">
+      <img src="../assets/gallery/10d2c8a48dd520913fba4ab052ec2fa11d2d24f915cd23ca7c4b538a9b8b79fb.jpg" alt="The control room at AMPED UP AUDIO in El Monte, CA — recording is $40 an hour with an engineer included">
+      <figcaption>The control room — AMPED UP AUDIO, El Monte.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="article-wrap article-body">
+
+    <p>Session etiquette is not about being formal — it is about protecting the work. A recording session runs on a clock, in a shared room, with one person performing and one person listening closely. Small habits — arriving ready, speaking clearly, keeping the room focused — decide whether the time turns into finished takes or gets spent sorting out avoidable problems. At AMPED UP AUDIO in El Monte, recording is <strong>$40/hour &middot; with engineer</strong> included — this guide covers the etiquette that makes that time count.</p>
+
+    <p>AMPED UP AUDIO has been operating since October 2025. None of this requires experience. Most of it is the same whether it is your first session or your fiftieth: respect the time, respect the people in the room, and come prepared to record.</p>
+
+    <h2>1. Arrive on time, and arrive ready</h2>
+
+    <div class="price-callout">
+      <p class="pc-main">Recording: <span>$40/hour &middot; with engineer</span></p>
+      <p>Every recording session at AMPED is $40/hour <strong>with engineer</strong> included. Mixing stays flat and separate: $100 for a 2-track mix, $150 for a full stem mix.</p>
+    </div>
+
+    <ul>
+      <li><strong>Your booked time is your working time.</strong> Setup, file transfers, and warm-ups all happen inside the session, so arriving late does not move the end time — it just leaves less time to record.</li>
+      <li><strong>Have your material ready before you walk in.</strong> Beats as real files, lyrics you can read, and a clear idea of which song comes first. The full list is in <a href="what-to-bring-to-a-recording-session.html">What to Bring to a Recording Session</a>.</li>
+      <li><strong>Warm up ahead of the session where you can.</strong> A voice that is already loose at the first take saves the early part of the session for recording instead of rehearsal.</li>
+      <li><strong>Say something if you are running late.</strong> A quick call or text is always better than silence — it lets the room plan around the time that is actually left.</li>
+    </ul>
+    <p>Preparation is its own topic — see <a href="how-to-prepare-for-your-first-recording-session.html">How to Prepare for Your First Recording Session</a> for the practice side, and <a href="how-long-does-a-recording-session-take.html">How Long Does a Recording Session Take?</a> for honest timing before you book.</p>
+
+    <h2>2. Communicate with the engineer — clearly and early</h2>
+    <ul>
+      <li><strong>Say what you want in plain language.</strong> You do not need technical terms. Describing the feeling, the energy, or a reference track works — that shared language is a big part of <a href="what-a-recording-engineer-actually-does.html">What a Recording Engineer Actually Does</a>.</li>
+      <li><strong>Speak up about how things sound to you.</strong> If your voice feels too loud or too quiet in your headphones, or a take felt better than it sounds on playback, say so in the moment. Small adjustments are easy early and hard to fix later.</li>
+      <li><strong>Give feedback one point at a time.</strong> Naming the specific line, moment, or sound you want changed is far more useful than a general note that something feels off.</li>
+      <li><strong>Trust the process on the technical side.</strong> Levels, mic placement, and take management are the engineer's job. Ask questions freely — a good room welcomes them — and let the answers shape the session rather than debating every setting.</li>
+    </ul>
+
+    <h2>3. Keep the room focused</h2>
+    <p>A studio is a listening environment. What sounds quiet in conversation can be loud on a recording, and a distracted room produces distracted performances.</p>
+    <ul>
+      <li><strong>Keep phones quiet while recording.</strong> Silence notifications before the session starts. A buzz or ringtone during a take can cost you the best performance of the day.</li>
+      <li><strong>Keep side conversations down during takes.</strong> Talk between takes is normal and welcome; talking over a take is not — the microphone hears more than people expect.</li>
+      <li><strong>Ask before bringing guests.</strong> Check with the studio when you book, and keep the group small. People who are part of the song or the decisions can help; a crowded room usually slows the work and changes how freely an artist performs.</li>
+      <li><strong>Handle food, drinks, and breaks with care.</strong> Take breaks away from the recording space, keep drinks away from equipment, and use short breaks to reset rather than letting the session drift. Water close by for the performer is the exception that helps — see <a href="vocal-recording-tips-how-to-get-a-better-take.html">Vocal Recording Tips: How to Get a Better Take</a>.</li>
+    </ul>
+
+    <h2>4. Respect the clock and the plan</h2>
+    <ul>
+      <li><strong>Start with the priority song.</strong> Voices and focus are freshest early. Finishing the most important song first means the session delivers even if a later idea runs long.</li>
+      <li><strong>Make decisions in the room.</strong> Picking a keeper take is much easier while the performance is fresh. Long debates over small details eat the time set aside for the next part — note the decision and keep moving.</li>
+      <li><strong>Know when a part is done.</strong> One more take is reasonable when something specific can improve. Repeating a part with no clear change in mind usually wears the voice out instead of improving the record.</li>
+      <li><strong>Leave time to wrap up properly.</strong> The last minutes matter: confirming which takes are keepers, how files are labeled, and what happens next with mixing. Messy wrap-ups are one of the avoidable problems in <a href="common-home-recording-mistakes.html">Common Home-Recording Mistakes</a> — the same habit applies in the studio.</li>
+    </ul>
+
+    <h2>5. Be straightforward about money and next steps</h2>
+    <ul>
+      <li><strong>Understand the booking before the session.</strong> Send a request with your service, day, and start time; the studio confirms your time directly — a request is not a confirmed appointment. A $40 deposit, which is your first hour, then locks the confirmed session.</li>
+      <li><strong>Know that recording and mixing are separate.</strong> Recording covers the session itself. Mixing afterwards is flat: a <strong>2-track mix is $100</strong> and a <strong>full stem mix is $150</strong>. For which one fits your files, see <a href="2-track-mix-vs-full-stem-mix-explained.html">2-Track Mix vs. Full Stem Mix</a>.</li>
+      <li><strong>Ask pricing questions up front, not at the end.</strong> Clear questions before you book prevent surprises for everyone. What a booked session actually covers is laid out in <a href="recording-in-el-monte-what-a-session-includes.html">Recording in El Monte: What a Session Includes</a>.</li>
+    </ul>
+
+    <h2>The short version</h2>
+    <p>Arrive on time with your files and lyrics ready, communicate clearly and early, keep phones quiet and the room focused, ask before bringing guests, and respect the plan you booked. Recording at AMPED UP AUDIO is $40/hr with an engineer, so the setup, levels, and takes are handled in the room while you focus on performing. Mixing is separate and flat at $100 for a 2-track mix and $150 for a full stem mix, and a $40 deposit locks your confirmed time.</p>
+
+    <div class="cta-band">
+      <a class="btn btn-blue" href="../book-a-call.html">Book a session — $40/hr with engineer</a>
+      <a class="btn btn-ghost" href="../call-us.html">Prefer to talk first?</a>
+    </div>
+    <p style="margin-top:18px">Or call/text <a href="tel:+16266028481"><strong>(626) 602-8481</strong></a>.</p>
+
+    <h2>Questions artists ask</h2>
+
+    <div class="faq-item">
+      <h3>What is good etiquette for a recording studio session?</h3>
+      <p>Arrive on time and ready to work, bring your files and lyrics prepared, communicate clearly with the engineer, keep extra guests and distractions to a minimum, and respect the time you booked. At AMPED UP AUDIO, recording is $40/hr with an engineer included, so good etiquette is really about making sure that time goes into takes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I bring guests to a recording session?</h3>
+      <p>If you want to bring someone, check with the studio when you book and keep the group small. People who are part of the song or the decision-making help a session; a crowded, distracted room usually slows it down. When in doubt, ask first rather than arriving with extra people unannounced.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How much does recording and mixing cost at AMPED UP AUDIO?</h3>
+      <p>Recording at AMPED UP AUDIO is $40/hr with an engineer included — stated as $40/hour with engineer. Mixing is a separate flat service afterwards: $100 for a 2-track mix and $150 for a full stem mix.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does booking and the deposit work?</h3>
+      <p>Send a request on the booking page with your service, day, and start time. The studio checks the calendar and confirms your time with you directly — a request is not a confirmed appointment. A $40 deposit via Zelle, which is your first hour, then locks the confirmed session.</p>
+    </div>
+
+  </div>
+</section>
+</article>
+</main>
+<footer>
+  <div class="foot-giant" aria-hidden="true"><span>AMPED UP AUDIO</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">AMPED UP <span>AUDIO</span></a>
+        <p>Recording studio in El Monte, California. Real room, real engineer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="../services.html">Services</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../client-portal.html">Client Portal</a>
+        <a href="../call-us.html">Call Us</a>
+        <a href="../book-a-call.html">Book a session</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/amped_up_audio" target="_blank" rel="noopener">Instagram — @amped_up_audio</a>
+        <a href="tel:+16266028481">Call or text — (626) 602-8481</a>
+        <a href="/review">Leave a review</a>
+        <a href="../privacy.html">Privacy policy</a>
+        <a href="../terms.html">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+      <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+      <a class="founders-quiet" href="../founders.html">Founder's Pass</a>
+    </div>
+  </div>
+</footer>
+<script src="../site.js?v=2"></script>
+<script src="../stats.js?v=1" data-site="amped" defer></script>
+<script src="../ai-chat.js?v=2"></script>
+<script src="../consent.js?v=1"></script>
+<script id="counterscale-script" data-site-id="ampedup-audio" src="https://counterscale.wsbelijah.workers.dev/tracker.js"></script>
+</body>
+</html>
