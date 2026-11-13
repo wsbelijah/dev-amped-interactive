@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What a Recording Engineer Actually Does: More Than Pressing Record</title>
+  <meta name="description" content="What a recording engineer actually does in a session — levels, mic placement, takes, and session flow — at AMPED UP AUDIO in El Monte, where recording is $40/hr with an engineer.">
+  <link rel="canonical" href="https://ampedup-audio.com/blog/what-a-recording-engineer-actually-does">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What a Recording Engineer Actually Does: More Than Pressing Record">
+  <meta property="og:description" content="What a recording engineer actually does in a session — levels, mic placement, takes, and session flow — at AMPED UP AUDIO in El Monte, where recording is $40/hr with an engineer.">
+  <meta property="og:url" content="https://ampedup-audio.com/blog/what-a-recording-engineer-actually-does">
+  <meta property="og:image" content="https://ampedup-audio.com/assets/gallery/10d2c8a48dd520913fba4ab052ec2fa11d2d24f915cd23ca7c4b538a9b8b79fb.jpg">
+  <meta property="article:published_time" content="2026-11-06">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=14">
+  <link rel="stylesheet" href="../blog.css?v=1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What a Recording Engineer Actually Does: More Than Pressing Record",
+    "description": "What a recording engineer actually does in a session — levels, mic placement, takes, and session flow — at AMPED UP AUDIO in El Monte, where recording is $40/hr with an engineer.",
+    "url": "https://ampedup-audio.com/blog/what-a-recording-engineer-actually-does",
+    "image": "https://ampedup-audio.com/assets/gallery/10d2c8a48dd520913fba4ab052ec2fa11d2d24f915cd23ca7c4b538a9b8b79fb.jpg",
+    "author": { "@type": "Organization", "name": "AMPED UP AUDIO", "url": "https://ampedup-audio.com" },
+    "publisher": { "@type": "Organization", "name": "AMPED UP AUDIO", "url": "https://ampedup-audio.com" },
+    "datePublished": "2026-11-06"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What does a recording engineer do during a session?", "acceptedAnswer": { "@type": "Answer", "text": "A recording engineer sets up the session, places the mic, sets clean levels, runs playback and punch-ins, tracks and organizes takes, and watches for problems like clipping or noise so the artist can focus on performing. At AMPED UP AUDIO, recording is $40/hr with an engineer included." } },
+      { "@type": "Question", "name": "Is the engineer included in the price at AMPED UP AUDIO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Recording at AMPED UP AUDIO is $40/hr with an engineer included — stated as $40/hour with engineer. You are not paying for an empty room and then adding engineering on top." } },
+      { "@type": "Question", "name": "Is mixing part of what the engineer does during recording?", "acceptedAnswer": { "@type": "Answer", "text": "No. Recording is capturing the performance cleanly. Mixing is a separate flat service afterwards at AMPED UP AUDIO: $100 for a 2-track mix and $150 for a full stem mix. The engineer may balance levels so you can hear yourself clearly while tracking, but that is not a finished mix." } },
+      { "@type": "Question", "name": "How does booking and the deposit work?", "acceptedAnswer": { "@type": "Answer", "text": "Send a request on the booking page with your service, day, and start time. The studio checks the calendar and confirms your time with you directly — a request is not a confirmed appointment. A $40 deposit via Zelle, which is your first hour, then locks the confirmed session." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+<div id="progress" aria-hidden="true"></div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">AMPED UP <span>AUDIO</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="../services.html">Services</a>
+      <a href="../portfolio.html">Portfolio</a>
+      <a href="../founders.html">Founder's Pass</a>
+      <a href="../client-portal.html">Client Portal</a>
+      <a href="../call-us.html">Call Us</a>
+      <a class="btn btn-blue" href="../book-a-call.html">Book a session</a>
+    </div>
+  </div>
+</nav>
+<main>
+<article>
+<section class="section page-top page-head">
+  <div class="article-wrap">
+    <p class="kicker reveal">Studio Guide &middot; El Monte, California</p>
+    <h1 class="section-title reveal">What a Recording Engineer Actually Does: More Than Pressing Record</h1>
+    <p class="article-meta reveal">By <strong>AMPED UP AUDIO</strong> &middot; November 6, 2026</p>
+    <figure class="article-hero reveal">
+      <img src="../assets/gallery/10d2c8a48dd520913fba4ab052ec2fa11d2d24f915cd23ca7c4b538a9b8b79fb.jpg" alt="The control room at AMPED UP AUDIO in El Monte, CA — recording is $40 an hour with an engineer included">
+      <figcaption>The control room — AMPED UP AUDIO, El Monte.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="article-wrap article-body">
+
+    <p>From the artist's side of the glass, it can look simple: you step up to the mic, the engineer presses record, you perform. In reality, most of what makes a session sound clean and move fast happens before, between, and underneath those takes. At AMPED UP AUDIO in El Monte, recording is <strong>$40/hour &middot; with engineer</strong> included — this is what that engineer is actually doing with your session time.</p>
+
+    <p>AMPED UP AUDIO has been operating since October 2025. Whether you record here or anywhere in the San Gabriel Valley, understanding the engineer's job helps you use the session better — and understand why recording with an engineer is different from renting an empty room.</p>
+
+    <h2>Before the first take</h2>
+
+    <div class="price-callout">
+      <p class="pc-main">Recording: <span>$40/hour &middot; with engineer</span></p>
+      <p>Every recording session at AMPED is $40/hour <strong>with engineer</strong> included. Mixing stays flat and separate: $100 for a 2-track mix, $150 for a full stem mix.</p>
+    </div>
+
+    <ul>
+      <li><strong>Building the session.</strong> Loading your beat or session files, setting the tempo and routing, and making sure playback comes through your headphones at a level you can perform to.</li>
+      <li><strong>Placing the mic for your voice.</strong> Height, distance, and angle change tone more than most people expect. The engineer sets placement for how you actually deliver — quiet and close, or loud and projected — instead of leaving you at a one-size setup.</li>
+      <li><strong>Setting clean levels.</strong> Too quiet and the take gets noisy when it is turned up later; too loud and it clips, and clipped audio cannot be un-clipped. Getting this right at the start protects every take that follows.</li>
+      <li><strong>Checking the chain.</strong> A quick listen for hum, noise, or anything in the signal path that would end up baked into your recording — caught now, not discovered after you leave.</li>
+    </ul>
+    <p>None of this is performance time, but skipping it costs more time later. For how to do your part before you arrive, see <a href="how-to-prepare-for-your-first-recording-session.html">How to Prepare for Your First Recording Session</a>.</p>
+
+    <h2>While you are recording</h2>
+    <ul>
+      <li><strong>Running the session so you can just perform.</strong> Starting and stopping takes, playing you in from the right bar, and punching in a single line when one spot needs fixing — so you are never stepping out of performance mode to operate anything.</li>
+      <li><strong>Watching the take, not just recording it.</strong> Listening for clipping, plosives, room noise, and headphone bleed while you sing or rap, and flagging a problem take immediately instead of letting you build on a flawed one.</li>
+      <li><strong>Managing your headphone mix.</strong> If you cannot hear the beat clearly, or your voice is too loud or too quiet in your own ears, your delivery changes. Small balance adjustments keep you locked in.</li>
+      <li><strong>Giving honest, useful feedback.</strong> Not hype and not nitpicking — a clear outside ear on whether a take landed, whether the energy dropped in the second half, or whether one more pass is worth it.</li>
+    </ul>
+    <p>That last point is why full takes work so well in the room — see <a href="vocal-recording-tips-how-to-get-a-better-take.html">Vocal Recording Tips: How to Get a Better Take</a> for how engineers and artists usually split that work.</p>
+
+    <h2>Between takes: the invisible work</h2>
+    <p>A lot of engineering happens when the mic is off. Takes get labeled and organized so the best verse, hook, doubles, and ad-libs can be found in seconds, not hunted for later. Strong sections get marked while the session is fresh. If a line needs comping — combining the best pieces of a few takes — the engineer keeps track of which pieces those are.</p>
+    <ul>
+      <li><strong>Keeping the session moving.</strong> Watching the clock honestly, suggesting when to move from one song part to the next, and helping you spend booked time on recording instead of decisions that stall it. For planning, see <a href="how-long-does-a-recording-session-take.html">How Long Does a Recording Session Take?</a></li>
+      <li><strong>Solving problems in the room.</strong> A buzz that appears mid-session, a file that will not import, a headphone issue — the engineer troubleshoots so a technical snag does not eat your whole booking.</li>
+      <li><strong>Protecting your files.</strong> Saving as the session goes and keeping takes organized means what you recorded is what you leave with — nothing lost to an unsaved session.</li>
+    </ul>
+
+    <h2>What an engineer is not doing during recording</h2>
+    <p>Recording and mixing are different jobs, even when the same person does both at different times. During a recording session, the goal is a clean, well-organized capture of your performance. Balancing the finished record — levels, effects, and polish across the vocal and the beat — is mixing, and it happens afterwards as a separate flat service: a <strong>2-track mix is $100</strong> and a <strong>full stem mix is $150</strong> at AMPED UP AUDIO. The balance you hear in your headphones while tracking is a working cue mix, not the finished product. If you are weighing the two mix options, see <a href="2-track-mix-vs-full-stem-mix-explained.html">2-Track Mix vs. Full Stem Mix</a>, and for the full breakdown of a booking, see <a href="recording-in-el-monte-what-a-session-includes.html">Recording in El Monte: What a Session Includes</a>.</p>
+
+    <h2>The short version</h2>
+    <p>An engineer sets up the session, places the mic, sets clean levels, runs takes and punch-ins, watches for problems you cannot hear from the booth, keeps every take organized, and keeps the session moving — so your only job is the performance. Recording at AMPED UP AUDIO is $40/hr with an engineer, mixing is separate and flat at $100 for a 2-track mix and $150 for a full stem mix, and a $40 deposit locks your confirmed time.</p>
+
+    <div class="cta-band">
+      <a class="btn btn-blue" href="../book-a-call.html">Book a session — $40/hr with engineer</a>
+      <a class="btn btn-ghost" href="../call-us.html">Prefer to talk first?</a>
+    </div>
+    <p style="margin-top:18px">Or call/text <a href="tel:+16266028481"><strong>(626) 602-8481</strong></a>.</p>
+
+    <h2>Questions artists ask</h2>
+
+    <div class="faq-item">
+      <h3>What does a recording engineer do during a session?</h3>
+      <p>A recording engineer sets up the session, places the mic, sets clean levels, runs playback and punch-ins, tracks and organizes takes, and watches for problems like clipping or noise so the artist can focus on performing. At AMPED UP AUDIO, recording is $40/hr with an engineer included.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is the engineer included in the price at AMPED UP AUDIO?</h3>
+      <p>Yes. Recording at AMPED UP AUDIO is $40/hr with an engineer included — stated as $40/hour with engineer. You are not paying for an empty room and then adding engineering on top.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is mixing part of what the engineer does during recording?</h3>
+      <p>No. Recording is capturing the performance cleanly. Mixing is a separate flat service afterwards at AMPED UP AUDIO: $100 for a 2-track mix and $150 for a full stem mix. The engineer may balance levels so you can hear yourself clearly while tracking, but that is not a finished mix.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does booking and the deposit work?</h3>
+      <p>Send a request on the booking page with your service, day, and start time. The studio checks the calendar and confirms your time with you directly — a request is not a confirmed appointment. A $40 deposit via Zelle, which is your first hour, then locks the confirmed session.</p>
+    </div>
+
+  </div>
+</section>
+</article>
+</main>
+<footer>
+  <div class="foot-giant" aria-hidden="true"><span>AMPED UP AUDIO</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">AMPED UP <span>AUDIO</span></a>
+        <p>Recording studio in El Monte, California. Real room, real engineer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="../services.html">Services</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../client-portal.html">Client Portal</a>
+        <a href="../call-us.html">Call Us</a>
+        <a href="../book-a-call.html">Book a session</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/amped_up_audio" target="_blank" rel="noopener">Instagram — @amped_up_audio</a>
+        <a href="tel:+16266028481">Call or text — (626) 602-8481</a>
+        <a href="/review">Leave a review</a>
+        <a href="../privacy.html">Privacy policy</a>
+        <a href="../terms.html">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+      <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+      <a class="founders-quiet" href="../founders.html">Founder's Pass</a>
+    </div>
+  </div>
+</footer>
+<script src="../site.js?v=2"></script>
+<script src="../stats.js?v=1" data-site="amped" defer></script>
+<script src="../ai-chat.js?v=2"></script>
+<script src="../consent.js?v=1"></script>
+<script id="counterscale-script" data-site-id="ampedup-audio" src="https://counterscale.wsbelijah.workers.dev/tracker.js"></script>
+</body>
+</html>
