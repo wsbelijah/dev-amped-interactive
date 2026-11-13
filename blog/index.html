@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — AMPED UP AUDIO</title>
+  <meta name="description" content="Guides and straight answers from AMPED UP AUDIO in El Monte, CA — recording studio prices, mixing explained, and how to pick a room in the San Gabriel Valley.">
+  <link rel="canonical" href="https://ampedup-audio.com/blog">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=14">
+  <link rel="stylesheet" href="../blog.css?v=1">
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+<div id="progress" aria-hidden="true"></div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">AMPED UP <span>AUDIO</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="../services.html">Services</a>
+      <a href="../portfolio.html">Portfolio</a>
+      <a href="../founders.html">Founder's Pass</a>
+      <a href="../client-portal.html">Client Portal</a>
+      <a href="../call-us.html">Call Us</a>
+      <a class="btn btn-blue" href="../book-a-call.html">Book a session</a>
+    </div>
+  </div>
+</nav>
+<main>
+<section class="section page-top page-head">
+  <div class="container">
+    <p class="kicker reveal">Blog</p>
+    <h1 class="section-title reveal">Straight answers, from the room</h1>
+    <p class="section-sub reveal">What recording actually costs, how mixing works, and how to pick a studio in El Monte and the San Gabriel Valley. No hype &mdash; the same way the studio prices its sessions.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="post-list">
+      <a class="post-card reveal" href="recording-studio-near-temple-city.html">
+        <p class="kicker">Studio Guide &middot; November 12, 2026</p>
+        <h2>Recording Studio Near Temple City, CA: What to Know Before You Book</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. For Temple City artists, here's what to check before booking — engineer included, real totals, and how booking works.</p>
+        <span class="read-more">Read the Temple City guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="recording-studio-near-rosemead.html">
+        <p class="kicker">Studio Guide &middot; November 11, 2026</p>
+        <h2>Recording Studio Near Rosemead, CA: What to Know Before You Book</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. For Rosemead artists, here's what to check before booking — engineer included, real totals, and how booking works.</p>
+        <span class="read-more">Read the Rosemead guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="recording-studio-near-baldwin-park.html">
+        <p class="kicker">Studio Guide &middot; November 10, 2026</p>
+        <h2>Recording Studio Near Baldwin Park, CA: What to Know Before You Book</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. For Baldwin Park artists, here's what to check before booking — engineer included, real totals, and how booking works.</p>
+        <span class="read-more">Read the Baldwin Park guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="recording-studio-session-etiquette.html">
+        <p class="kicker">Session Guide &middot; November 9, 2026</p>
+        <h2>Recording Studio Session Etiquette: How to Get the Most From Your Time</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's the etiquette that protects your time — arriving ready, communicating clearly, and keeping the room focused.</p>
+        <span class="read-more">Read the etiquette guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="what-to-bring-to-a-recording-session.html">
+        <p class="kicker">Session Guide &middot; November 8, 2026</p>
+        <h2>What to Bring to a Recording Session: A Complete Checklist for Artists</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's what to bring — your beats and files, lyrics, references, and the basics that save studio time.</p>
+        <span class="read-more">Read the checklist &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="common-home-recording-mistakes.html">
+        <p class="kicker">Recording Guide &middot; November 7, 2026</p>
+        <h2>Common Home-Recording Mistakes (And How to Avoid Them in the Studio)</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's what goes wrong at home — room echo, clipping, drifting mic distance, and messy files — and how a studio session avoids it.</p>
+        <span class="read-more">Read the home-recording guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="what-a-recording-engineer-actually-does.html">
+        <p class="kicker">Studio Guide &middot; November 6, 2026</p>
+        <h2>What a Recording Engineer Actually Does: More Than Pressing Record</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's what that engineer is actually doing — setting levels, placing the mic, running takes, and keeping your session moving.</p>
+        <span class="read-more">Read the engineer guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="vocal-recording-tips-how-to-get-a-better-take.html">
+        <p class="kicker">Vocal Guide &middot; November 5, 2026</p>
+        <h2>Vocal Recording Tips: How to Get a Better Take in the Studio</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's how to get a better vocal take — warm-ups, mic distance, full takes vs. punch-ins, and delivery over perfection.</p>
+        <span class="read-more">Read the vocal guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="how-long-does-a-recording-session-take.html">
+        <p class="kicker">Session Guide &middot; November 4, 2026</p>
+        <h2>How Long Does a Recording Session Take? A Realistic Guide</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's what actually uses up session time, and how to pick 1, 2, 3, or 4+ hours for one song or more.</p>
+        <span class="read-more">Read the timing guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="recording-in-el-monte-what-a-session-includes.html">
+        <p class="kicker">Session Guide &middot; November 4, 2026</p>
+        <h2>Recording in El Monte: What a $40/hr Session With an Engineer Actually Includes</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's exactly what that covers — the engineer, the tracking, the booking flow and $40 deposit — and what mixing costs on top.</p>
+        <span class="read-more">See what's included &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="2-track-mix-vs-full-stem-mix-explained.html">
+        <p class="kicker">Mixing Guide &middot; November 3, 2026</p>
+        <h2>2-Track Mix vs. Full Stem Mix: What's the Difference and Which Do You Need?</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's the difference between a $100 2-track mix and a $150 full stem mix — what each includes, and how your files decide which one you need.</p>
+        <span class="read-more">Read the mixing guide &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="how-to-prepare-for-your-first-recording-session.html">
+        <p class="kicker">Session Guide &middot; November 2, 2026</p>
+        <h2>How to Prepare for Your First Recording Session: A First-Timer's Checklist</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here's how to prepare — what to practice, what to bring, and what actually happens in the room on your first session.</p>
+        <span class="read-more">Read the checklist &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="how-much-does-a-recording-studio-cost-in-el-monte.html">
+        <p class="kicker">Studio Prices &middot; November 1, 2026</p>
+        <h2>How Much Does a Recording Studio Cost in El Monte? Real Prices, Explained</h2>
+        <p>Recording in El Monte is $40/hr with an engineer at AMPED UP AUDIO. Here are the real totals — 2, 3, and 4-hour sessions, record-plus-mix math, deposits, and what drives the price anywhere else.</p>
+        <span class="read-more">See the real prices &rarr;</span>
+      </a>
+      <a class="post-card reveal" href="best-recording-studios-el-monte-san-gabriel-valley.html">
+        <p class="kicker">Studio Guide &middot; October 30, 2026</p>
+        <h2>Best Recording Studios in El Monte &amp; the San Gabriel Valley: 6 Options Compared</h2>
+        <p>Recording in El Monte starts at $40/hr with an engineer at AMPED UP AUDIO. Here's how it compares with real rooms in Montebello, Alhambra, Pasadena, Pico Rivera, and Whittier &mdash; and how to actually choose.</p>
+        <span class="read-more">Read the comparison &rarr;</span>
+      </a>
+    </div>
+    <div class="cta-band reveal">
+      <a class="btn btn-blue" href="../book-a-call.html">Book a session &mdash; $40/hr with engineer</a>
+      <a class="btn btn-ghost" href="../call-us.html">Prefer to talk first?</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="foot-giant" aria-hidden="true"><span>AMPED UP AUDIO</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">AMPED UP <span>AUDIO</span></a>
+        <p>Recording studio in El Monte, California. Real room, real engineer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="../services.html">Services</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../client-portal.html">Client Portal</a>
+        <a href="../call-us.html">Call Us</a>
+        <a href="../book-a-call.html">Book a session</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/amped_up_audio" target="_blank" rel="noopener">Instagram — @amped_up_audio</a>
+        <a href="tel:+16266028481">Call or text — (626) 602-8481</a>
+        <a href="/review">Leave a review</a>
+        <a href="../privacy.html">Privacy policy</a>
+        <a href="../terms.html">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+      <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+      <a class="founders-quiet" href="../founders.html">Founder's Pass</a>
+    </div>
+  </div>
+</footer>
+<script src="../site.js?v=2"></script>
+<script src="../stats.js?v=1" data-site="amped" defer></script>
+<script src="../ai-chat.js?v=2"></script>
+<script src="../consent.js?v=1"></script>
+<script id="counterscale-script" data-site-id="ampedup-audio" src="https://counterscale.wsbelijah.workers.dev/tracker.js"></script>
+</body>
+</html>
