@@ -1,0 +1,96 @@
+/* AMPED UP AUDIO — blog / article styles (uses tokens from styles.css) */
+
+.article-wrap { width: min(780px, 100% - 48px); margin-inline: auto; }
+
+.article-meta {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  margin-top: 6px;
+}
+.article-meta strong { color: var(--accent); font-weight: 600; }
+
+.article-hero { margin: 36px 0 8px; }
+.article-hero img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+.article-hero figcaption {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  margin-top: 10px;
+}
+
+.article-body { font-size: 1.05rem; }
+.article-body p { margin: 0 0 20px; color: rgba(244, 241, 232, 0.88); }
+.article-body h2 {
+  font-size: clamp(1.45rem, 3.2vw, 1.9rem);
+  margin: 48px 0 16px;
+}
+.article-body h3 { font-size: 1.15rem; margin: 28px 0 8px; }
+.article-body ul { margin: 0 0 22px; padding-left: 22px; }
+.article-body li { margin-bottom: 10px; color: rgba(244, 241, 232, 0.88); }
+.article-body strong { color: var(--text); }
+.article-body a { color: var(--accent); text-underline-offset: 3px; }
+.article-body a:hover { filter: brightness(1.15); }
+
+.price-callout {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 0 0 26px;
+}
+.price-callout .pc-main {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.price-callout .pc-main span { color: var(--accent); }
+.price-callout p { margin: 0; }
+
+.faq-item {
+  border-top: 1px solid var(--line);
+  padding: 20px 0 4px;
+}
+.faq-item h3 { margin-top: 0; }
+
+/* Blog index cards */
+.post-list { display: grid; gap: 20px; }
+.post-card {
+  display: block;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.post-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.post-card .kicker { margin-bottom: 10px; }
+.post-card h2, .post-card h3 {
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  margin-bottom: 10px;
+}
+.post-card p { color: var(--text-dim); margin: 0; }
+.post-card .read-more {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .article-wrap { width: calc(100% - 40px); }
+  .price-callout .pc-main { font-size: 1.35rem; }
+  .post-card { padding: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post-card { transition: none; }
+  .post-card:hover { transform: none; }
+}
