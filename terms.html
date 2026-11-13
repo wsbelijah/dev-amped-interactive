@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — AMPED UP AUDIO</title>
+  <meta name="description" content="Terms of service for AMPED UP AUDIO — booking terms, deposits, and studio policies.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <style>
+    .privacy-body { max-width: 720px; padding: 120px 0 80px; }
+    .privacy-body h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 12px; }
+    .privacy-body .updated { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 36px; }
+    .privacy-body h2 { font-size: 1.25rem; margin: 32px 0 10px; }
+    .privacy-body p, .privacy-body li { color: var(--text-dim); margin-bottom: 12px; }
+    .privacy-body ul { padding-left: 22px; }
+    .privacy-body a { color: var(--accent); }
+    .back-link { display: inline-block; margin-bottom: 28px; color: var(--text-dim); text-decoration: none; font-size: 0.95rem; }
+    .back-link:hover { color: var(--text); }
+  </style>
+  <link rel="prefetch" href="book-a-call.html">
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+  <nav class="nav scrolled" id="nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">AMPED UP <span>AUDIO</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+      <div class="nav-links" id="navLinks">
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="founders.html">Founder's Pass</a>
+        <a href="client-portal.html">Client Portal</a>
+        <a href="call-us.html">Call Us</a>
+        <a class="btn btn-blue" href="book-a-call.html">Book a session</a>
+    </div>
+    </div>
+  </nav>
+
+  <main class="container privacy-body">
+    <a class="back-link" href="index.html">&larr; Back to the studio</a>
+    <p class="kicker">Terms of service</p>
+    <h1>Plain-language terms</h1>
+    <p class="updated">Last updated: October 2026</p>
+
+    <h2>What this site is</h2>
+    <p>This is the website for AMPED UP AUDIO, a recording studio in El Monte, California. AMPED UP AUDIO is a trade name of Elistudios LLC. It describes the studio's services and offers a booking request form. Nothing on this site is an offer of employment, a partnership, or anything beyond studio services.</p>
+
+    <h2>Bookings</h2>
+    <ul>
+      <li>Sending the booking form is a request, not a confirmed session. Your session is confirmed only when the studio replies and confirms your date and time.</li>
+      <li>A $40 deposit (the first hour of your session) locks your slot. The deposit is paid via Zelle to the studio's business account.</li>
+      <li>Sessions are priced at the rates shown on the site. Any discounts or promo codes apply only as stated when the code was issued.</li>
+    </ul>
+
+    <h2>Late arrivals</h2>
+    <p>You have a 20-minute grace period. After that, a $20 late fee applies. Session time is not extended for late arrival.</p>
+
+    <h2>Cancellations</h2>
+    <p>If you need to cancel, let the studio know as soon as possible so the slot can be offered to someone else. The studio may reschedule your deposit to a new date at its discretion.</p>
+
+    <h2>SMS terms</h2>
+    <p>Elistudios LLC offers text messaging for booking confirmations and reminders, session follow-ups, replies to messages you send the studio, and a one-time text-back if we miss your call to the studio number. By checking the texting box on our booking form or message form, you agree to receive these texts at the number you provided.</p>
+    <ul>
+      <li>Message frequency varies.</li>
+      <li>Message and data rates may apply.</li>
+      <li>Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help.</li>
+      <li>Texting consent is not a condition of booking a session.</li>
+      <li>Carriers are not liable for delayed or undelivered messages.</li>
+    </ul>
+    <p>For help with text messaging, contact AMPED UP AUDIO at (626) 602-8481 or <a href="mailto:Eli.otl.music@gmail.com">Eli.otl.music@gmail.com</a>.</p>
+
+    <h2>Using the site</h2>
+    <ul>
+      <li>Use the booking form for genuine session requests only. Don't submit false information or requests on someone else's behalf.</li>
+      <li>Site content — text, photos, and branding — belongs to AMPED UP AUDIO. Don't copy or reuse it without permission.</li>
+    </ul>
+
+    <h2>Limits</h2>
+    <p>Service details and policies may change as the studio grows; this page will be updated to match. If any part of these terms is found unenforceable, the rest still stands.</p>
+
+    <h2>Questions</h2>
+    <p>For anything about these terms, reach the studio at <a href="mailto:Eli.otl.music@gmail.com">Eli.otl.music@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+        <span><a href="founders.html">Founder's Pass</a> &middot; <a href="client-portal.html">Client Portal</a> &middot; <a href="index.html">Back to the studio</a> &middot; <a href="privacy.html">Privacy policy</a> &middot; <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button></span>
+      </div>
+    </div>
+  </footer>
+<script src="site.js?v=2" defer></script>
+<script src="stats.js?v=1" data-site="amped" defer></script>
+<script src="consent.js?v=1"></script>
+<script id="counterscale-script" data-site-id="ampedup-audio" src="https://counterscale.wsbelijah.workers.dev/tracker.js"></script>
+</body>
+</html>
