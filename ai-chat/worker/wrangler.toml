@@ -1,0 +1,19 @@
+# AMPED UP AUDIO — website chat Worker.
+# NO SECRETS IN THIS FILE. The AI binding needs no key.
+# Deploy:  npx wrangler deploy   (from this directory)
+# The KV namespace id below is filled in after:
+#   npx wrangler kv namespace create CHAT_KV
+
+name = "amped-chat"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://ampedup-audio.com,https://www.ampedup-audio.com,https://demo-amped.pages.dev"
+
+[ai]
+binding = "AI"
+
+[[kv_namespaces]]
+binding = "CHAT_KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
