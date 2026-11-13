@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analytics consent gate: Consent Mode v2 defaults denied before any gtag call.
+     gtag.js itself loads only after consent — see consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+  try {
+    if (localStorage.getItem('amped-analytics-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMPED UP AUDIO — Recording Studio in El Monte, CA</title>
+  <meta name="description" content="AMPED UP AUDIO is a recording studio in El Monte, California. Recording, 2-track mixing, and full stem mixing with owner and recording engineer Elijah Jacquet.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0D'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='700' font-size='34' fill='%23D9A441' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="console.css?v=1">
+  <link rel="prefetch" href="book-a-call.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RecordingStudio",
+  "name": "AMPED UP AUDIO",
+  "url": "https://ampedup-audio.com/",
+  "telephone": "+1-626-602-8481",
+  "image": "https://ampedup-audio.com/assets/hero-seq-poster.jpg",
+  "sameAs": ["https://www.instagram.com/amped_up_audio/"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "South El Monte",
+    "addressRegion": "CA",
+    "postalCode": "91733",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "12:00", "closes": "02:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "17:00", "closes": "02:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "19:00", "closes": "02:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "15:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday", "Sunday"], "opens": "21:00", "closes": "02:00" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Studio services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recording Session — $40/hr with engineer" }, "price": "40", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "2-Track Mix" }, "price": "100", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Stem Mix" }, "price": "150", "priceCurrency": "USD" }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I lock in a session?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Send a booking request on the booking page. A $40 deposit via Zelle — your first hour — locks your time on the calendar." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I'm running late?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You get a 20-minute grace period. After that, a $20 late fee applies." }
+    },
+    {
+      "@type": "Question",
+      "name": "I have a promo or referral code — where does it go?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Drop it in the promo / referral code field on the booking form and it will be applied to your request." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the studio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "AMPED UP AUDIO is in El Monte, California. The exact location and parking details come with your booking confirmation." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after I send a booking request?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your request goes straight to the studio. You'll hear back to confirm your time, and your $40 Zelle deposit locks it in." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a recording session cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Recording is $40/hour, with an engineer included for your whole session — no separate engineer fee and no packages. A $40 deposit (your first hour) locks a confirmed session." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does mixing cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mixing is separate from recording and priced flat: $100 for a 2-track mix, $150 for a full stem mix." }
+    },
+    {
+      "@type": "Question",
+      "name": "What hours is the studio open?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Monday 12 PM–2 AM, Tuesday 5 PM–2 AM, Wednesday and Thursday 7 PM–2 AM, and Friday–Sunday 9 AM–3 PM and 9 PM–2 AM." }
+    }
+  ]
+}
+</script>
+</head>
+<body id="top">
+<div class="dev-banner" role="note">DEV PREVIEW — interactive concept build. Not the live site.</div>
+
+<!-- Custom cursor: gold dot + trailing ring, contextual states (fine pointers only) -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel">Scroll</span></div>
+
+<!-- Diegetic loader: the console boots, then eases away. Shown by JS only. -->
+<div id="loader" hidden>
+  <div class="loader-inner">
+    <p class="loader-brand">AMPED UP <span>AUDIO</span></p>
+    <div class="loader-console" aria-hidden="true">
+      <p class="boot-line">&gt; power on</p>
+      <p class="boot-line">&gt; warming up the console&hellip;</p>
+      <p class="boot-line">&gt; levels check <span class="vu"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></p>
+      <p class="boot-line ok">&gt; ready</p>
+    </div>
+  </div>
+</div>
+
+<div id="progress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">AMPED UP <span>AUDIO</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="founders.html">Founder's Pass</a>
+      <a href="client-portal.html">Client Portal</a>
+      <a href="call-us.html">Call Us</a>
+      <a class="btn btn-blue" href="book-a-call.html">Book a session</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. HERO — pinned, scroll-scrubbed -->
+<div class="hero-pin" id="hero">
+  <div class="hero-stage" id="heroStage">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <img class="hero-poster" id="heroPoster" src="assets/hero-seq-poster.jpg" alt="Vinyl record with a gold label, close-up">
+    <div class="hero-shade"></div>
+    <div class="hero-content" id="heroContent">
+      <div class="container">
+        <p class="kicker hero-reveal">El Monte, California</p>
+        <h1 class="hero-reveal">AMPED UP<br>AUDIO</h1>
+        <p class="hero-lede hero-reveal">El Monte recording studio. Real room, real engineer, records that sound like you.</p>
+        <div class="hero-ctas hero-reveal">
+          <a class="btn btn-blue magnetic" href="book-a-call.html">Book a session</a>
+          <a class="btn btn-ghost" href="portfolio.html">Hear the work</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" id="scrollHint" aria-hidden="true">Scroll</div>
+  </div>
+  <div class="scrub-spacer" id="scrubSpacer" aria-hidden="true"></div>
+
+</div><!-- /hero-pin -->
+
+<main>
+  <!-- 2. SERVICES — slides over the pinned hero -->
+  <section class="section slideover" id="services">
+    <div class="container">
+      <p class="kicker reveal">Services</p>
+      <h2 class="section-title reveal">What the room does</h2>
+      <p class="section-sub reveal">Three services, straight rates. No packages to decode, no fine print hiding the price.</p>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <h3>Recording</h3>
+          <p class="service-price"><span data-count="40" data-prefix="$">$40</span><small>/hour · with engineer</small></p>
+          <p>Track your record in the room with an engineer behind the desk. Vocals, instruments, full sessions.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>2-Track Mix</h3>
+          <p class="service-price"><span data-count="100" data-prefix="$">$100</span><small> flat</small></p>
+          <p>Your two-track, mixed and finished. Send the track, get back a record.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Full Stem Mix</h3>
+          <p class="service-price"><span data-count="150" data-prefix="$">$150</span><small> flat</small></p>
+          <p>Full stems, full control. Every element balanced into the final record.</p>
+        </article>
+      </div>
+      <div class="deposit-strip reveal">
+        <strong>$40 deposit locks your session.</strong> The deposit is your first hour, sent via Zelle when you book.
+      </div>
+    </div>
+  </section>
+  <!-- DEV BUILD: BUILD YOUR SESSION — playable console -->
+  <section class="section" id="build">
+    <div class="container">
+      <p class="kicker reveal">Session builder</p>
+      <h2 class="section-title reveal">Build your session</h2>
+      <p class="section-sub reveal">Pick a service, ride the fader, and watch the receipt print. Same straight rates as the booking form — nothing to decode.</p>
+      <div class="console-wrap">
+        <div class="console-panel reveal">
+          <div class="console-picker" id="consolePicker" role="radiogroup" aria-label="Choose a service">
+            <button type="button" class="pick-btn" role="radio" aria-checked="true" data-service="recording">
+              <span class="pick-name">Recording</span>
+              <span class="pick-price">$40/hr · with engineer</span>
+            </button>
+            <button type="button" class="pick-btn" role="radio" aria-checked="false" data-service="twotrack" tabindex="-1">
+              <span class="pick-name">2-Track Mix</span>
+              <span class="pick-price">$100 flat</span>
+            </button>
+            <button type="button" class="pick-btn" role="radio" aria-checked="false" data-service="stem" tabindex="-1">
+              <span class="pick-name">Full Stem Mix</span>
+              <span class="pick-price">$150 flat</span>
+            </button>
+          </div>
+
+          <div class="fader-block" id="faderBlock">
+            <div class="fader-head">
+              <span class="fader-label" id="faderLabel">Session length</span>
+              <span class="fader-readout" id="hoursOut">2 <small>hours</small></span>
+            </div>
+            <div class="fader-row">
+              <button type="button" class="stepper" id="hoursMinus" aria-label="One hour less">&minus;</button>
+              <div class="fader-track-wrap">
+                <input type="range" class="fader" id="hoursFader" min="1" max="8" step="1" value="2" aria-labelledby="faderLabel">
+                <div class="fader-ticks" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+              </div>
+              <button type="button" class="stepper" id="hoursPlus" aria-label="One hour more">+</button>
+            </div>
+          </div>
+
+          <div class="mix-detail" id="mixDetail" hidden>
+            <p id="mixDetailText"></p>
+          </div>
+
+          <div class="console-lines" id="consoleLines" aria-hidden="true"></div>
+          <p class="console-note">Have a <strong>promo or referral code</strong>? It goes on the booking form — founder referral codes take 10% off recording sessions.</p>
+          <span class="sr-only" id="consoleLive" role="status" aria-live="polite"></span>
+        </div>
+
+        <div class="console-receipt-col reveal">
+          <div class="printer-slot" aria-hidden="true"></div>
+          <div class="receipt-clip">
+            <div class="receipt" id="receipt">
+              <p class="receipt-brand">AMPED UP AUDIO</p>
+              <p class="receipt-sub">El Monte, CA · Session build</p>
+              <div class="receipt-rule"></div>
+              <div id="receiptLines"></div>
+              <div class="receipt-rule"></div>
+              <p class="receipt-fine" id="receiptFine"></p>
+              <a class="btn btn-blue" id="receiptBook" href="book-a-call.html?service=recording&amp;hours=2&amp;total=80&amp;deposit=40">Book this session</a>
+              <p class="receipt-fine" style="margin-top:10px;text-align:center">Preview only — nothing is booked until you send the request.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEV BUILD: THE WORK — tap-to-open cards -->
+  <section class="section" id="work">
+    <div class="container">
+      <p class="kicker reveal">The work</p>
+      <h2 class="section-title reveal">Out of this room</h2>
+      <p class="section-sub reveal">Tap a card to open it up.</p>
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <button type="button" class="work-card-head" aria-expanded="false" aria-controls="workPanel1">
+            <span class="work-card-media"><img src="assets/portfolio/life-of-a-weirdo.jpg" alt="THE LIFE OF A WEIRDO — album cover" loading="lazy"></span>
+            <span class="work-card-titles">
+              <span class="work-card-kicker">From the room</span>
+              <span class="work-card-title">THE LIFE OF A WEIRDO</span>
+              <span class="work-card-meta">Records that came out of this room.</span>
+              <span class="work-card-toggle"><span class="wc-plus" aria-hidden="true">+</span><span class="wc-toggle-text">Open the details</span></span>
+            </span>
+          </button>
+          <div class="work-card-panel" id="workPanel1">
+            <div class="work-card-panel-inner">
+              <div class="work-card-body">
+                <p>Records that came out of this room — made at AMPED UP AUDIO in El Monte, California.</p>
+                <p>The room works in late-night R&amp;B, melodic rap, and darker club sounds: music that feels like a real person talking about real experiences.</p>
+                <a class="btn btn-ghost" href="https://open.spotify.com/album/1L4R6mr9YJGD8bIPsOcya3" target="_blank" rel="noopener">Listen on Spotify</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <button type="button" class="work-card-head" aria-expanded="false" aria-controls="workPanel2">
+            <span class="work-card-titles">
+              <span class="work-card-kicker">Sessions</span>
+              <span class="work-card-title">Recording — $40/hr</span>
+              <span class="work-card-meta">With an engineer behind the desk.</span>
+              <span class="work-card-toggle"><span class="wc-plus" aria-hidden="true">+</span><span class="wc-toggle-text">Open the details</span></span>
+            </span>
+          </button>
+          <div class="work-card-panel" id="workPanel2">
+            <div class="work-card-panel-inner">
+              <div class="work-card-body">
+                <p>Track your record in the room with an engineer behind the desk. <strong>Vocals, instruments, full sessions.</strong></p>
+                <ul>
+                  <li><strong>Send the request</strong> — pick your service, your day, and your start time on the booking form.</li>
+                  <li><strong>Confirm your time</strong> — the studio checks the calendar and confirms your session time with you directly.</li>
+                  <li><strong>Lock it with the deposit</strong> — a $40 Zelle deposit, your first hour, locks the session.</li>
+                </ul>
+                <a class="btn btn-ghost" href="#build">Build a recording session</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <button type="button" class="work-card-head" aria-expanded="false" aria-controls="workPanel3">
+            <span class="work-card-titles">
+              <span class="work-card-kicker">Mixing</span>
+              <span class="work-card-title">2-Track &amp; Full Stem Mix</span>
+              <span class="work-card-meta">$100 flat · $150 flat.</span>
+              <span class="work-card-toggle"><span class="wc-plus" aria-hidden="true">+</span><span class="wc-toggle-text">Open the details</span></span>
+            </span>
+          </button>
+          <div class="work-card-panel" id="workPanel3">
+            <div class="work-card-panel-inner">
+              <div class="work-card-body">
+                <p><strong>2-Track Mix — $100 flat.</strong> Your two-track, mixed and finished. Send the track, get back a record.</p>
+                <p><strong>Full Stem Mix — $150 flat.</strong> Full stems, full control. Every element balanced into the final record.</p>
+                <p>Mixing is separate from recording and priced flat — no hourly clock.</p>
+                <a class="btn btn-ghost" href="#build">Price a mix</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- 4. ENGINEER -->
+  <section class="section" id="engineer">
+    <div class="eng-word" aria-hidden="true">ENGINEER</div>
+    <div class="container">
+      <p class="kicker reveal">The engineer</p>
+      <div class="engineer-grid">
+        <div>
+          <h2 class="engineer-name reveal">Elijah Jacquet</h2>
+          <div class="engineer-copy reveal">
+            <p><strong>Owner and recording engineer of AMPED UP AUDIO.</strong> He built this room piece by piece in El Monte, California — a space designed for one thing: records that sound like the artist who made them.</p>
+            <p>Late-night R&amp;B, melodic rap, darker club sounds — music that feels like a real person talking about real experiences, not forced and not over-polished.</p>
+          </div>
+        </div>
+        <aside class="engineer-facts reveal" aria-label="Studio facts">
+          <dl>
+            <div><dt>Role</dt><dd>Owner &amp; recording engineer</dd></div>
+            <div><dt>Studio</dt><dd>AMPED UP AUDIO — El Monte, CA</dd></div>
+            <div><dt>Services</dt><dd>Recording · 2-track mixing · Full stem mixing</dd></div>
+            <div><dt>Booking</dt><dd>Request on the booking page — $40 Zelle deposit locks your time</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MANIFESTO — scroll-scrubbed heading fill (focal event) -->
+  <section class="manifesto-pin" id="manifesto" aria-label="Studio manifesto">
+    <div class="manifesto-stage">
+      <p class="manifesto-line" id="manifestoLine">A real room. A real engineer. Records that sound like you.</p>
+    </div>
+  </section>
+
+  <!-- 5. INSIDE THE ROOM -->
+  <section class="section room-sec" id="room">
+    <div class="container">
+      <p class="kicker reveal">Inside the room</p>
+      <h2 class="section-title reveal">The actual studio</h2>
+      <p class="section-sub reveal">No stock photos. This is where your session happens.</p>
+    </div>
+    <div class="hwrap" id="roomWrap">
+      <div class="hpin" id="roomPin">
+        <div class="strip-wrap">
+          <div class="gallery-strip" id="roomStrip">
+          <figure class="strip-card">
+            <div class="strip-frame"><img src="assets/gallery/b9ae5fb4c4ad3f0d11b981b1aa09b786ce88ff95dbfef39db22d1125d9433453.jpg" alt="Mixing console glowing in the dark control room at AMPED UP AUDIO" loading="lazy"></div>
+            <figcaption>The desk, after hours</figcaption>
+          </figure>
+          <figure class="strip-card">
+            <div class="strip-frame"><img src="assets/gallery/10d2c8a48dd520913fba4ab052ec2fa11d2d24f915cd23ca7c4b538a9b8b79fb.jpg" alt="Engineer at the desk in the AMPED UP AUDIO control room" loading="lazy"></div>
+            <figcaption>The control room</figcaption>
+          </figure>
+          <figure class="strip-card">
+            <div class="strip-frame"><img src="assets/gallery/2402e1c9dece0e2d3b313f22fafc3252719bda5c6fcdb429ce65c869f41be26e.jpg" alt="Lounge area inside the AMPED UP AUDIO studio" loading="lazy"></div>
+            <figcaption>The lounge</figcaption>
+          </figure>
+          <figure class="strip-card">
+            <div class="strip-frame"><img src="assets/gallery/21bbdce563e36c1d104324117d3f9e8d083e33ef80a4f3a078179b74a4db84b2.jpg" alt="The AMPED UP AUDIO control room with the lights up" loading="lazy"></div>
+            <figcaption>The room, lights up</figcaption>
+          </figure>
+          <figure class="strip-card">
+            <div class="strip-frame"><img src="assets/gallery/19587f24b33dcef5706919a9dd165abb4693a8d1f1f195d9b5e40b40988b457d.jpg" alt="The AMPED UP AUDIO control room after dark" loading="lazy"></div>
+            <figcaption>After dark</figcaption>
+          </figure>
+          </div>
+          <div class="container">
+            <div class="strip-nav" aria-hidden="false">
+              <button id="stripPrev" aria-label="Previous photo">&#8592;</button>
+              <button id="stripNext" aria-label="Next photo">&#8594;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. HOURS -->
+  <section class="section" id="hours">
+    <div class="container">
+      <p class="kicker reveal">Hours</p>
+      <h2 class="section-title reveal">When the room is open</h2>
+      <p class="section-sub reveal">Late nights are the point. Book inside these hours and the room is yours.</p>
+      <div class="hours-list reveal">
+        <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">12:00 PM – 2:00 AM</span></div>
+        <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">5:00 PM – 2:00 AM</span></div>
+        <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">7:00 PM – 2:00 AM</span></div>
+        <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">7:00 PM – 2:00 AM</span></div>
+        <div class="hours-row"><span class="hours-day">Friday – Sunday</span><span class="hours-time">9:00 AM – 3:00 PM · 9:00 PM – 2:00 AM</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <p class="kicker reveal">FAQ</p>
+      <h2 class="section-title reveal">Before you book</h2>
+      <div class="faq-list reveal">
+        <details>
+          <summary>How do I lock in a session?</summary>
+          <p>Send a booking request on the booking page. A $40 deposit via Zelle — your first hour — locks your time on the calendar.</p>
+        </details>
+        <details>
+          <summary>What happens if I'm running late?</summary>
+          <p>You get a 20-minute grace period. After that, a $20 late fee applies.</p>
+        </details>
+        <details>
+          <summary>I have a promo or referral code — where does it go?</summary>
+          <p>Drop it in the promo / referral code field on the booking form and it will be applied to your request.</p>
+        </details>
+        <details>
+          <summary>Where is the studio?</summary>
+          <p>AMPED UP AUDIO is in El Monte, California. The exact location and parking details come with your booking confirmation.</p>
+        </details>
+        <details>
+          <summary>What happens after I send a booking request?</summary>
+          <p>Your request goes straight to the studio. You'll hear back to confirm your time, and your $40 Zelle deposit locks it in.</p>
+        </details>
+        <details>
+          <summary>How much does a recording session cost?</summary>
+          <p>Recording is $40/hour, with an engineer included for your whole session — no separate engineer fee and no packages. A $40 deposit (your first hour) locks a confirmed session.</p>
+        </details>
+        <details>
+          <summary>How much does mixing cost?</summary>
+          <p>Mixing is separate from recording and priced flat: $100 for a 2-track mix, $150 for a full stem mix.</p>
+        </details>
+        <details>
+          <summary>What hours is the studio open?</summary>
+          <p>Monday 12 PM–2 AM, Tuesday 5 PM–2 AM, Wednesday and Thursday 7 PM–2 AM, and Friday–Sunday 9 AM–3 PM and 9 PM–2 AM.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <p class="kicker reveal">Reviews</p>
+      <h2 class="section-title reveal">Rated 5.0 on Google</h2>
+      <div class="reviews-panel reveal">
+        <div class="reviews-score">
+          <span class="reviews-num">5.0</span>
+          <span class="reviews-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="reviews-count">2 reviews on Google</span>
+        </div>
+        <div class="reviews-list">
+          <div class="reviews-row">
+            <div class="reviews-row-head">
+              <span class="reviews-name">Built Co <span class="reviews-via">· via Google</span></span>
+              <span class="reviews-row-stars" role="img" aria-label="5-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="reviews-quote">Best studio in the area for the price. Smells really nice in there with great equipment. It's the perfect place for up incoming artist</p>
+          </div>
+          <div class="reviews-row">
+            <div class="reviews-row-head">
+              <span class="reviews-name">Terrance Knox Jr <span class="reviews-via">· via Google</span></span>
+              <span class="reviews-row-stars" role="img" aria-label="5-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="reviews-quote">This is my favorite local studio , it's very comfortable, reliable, and hold great quality, from the equipment to the engineers. its a great room for recording vocals and even tracking guitars, for a solid price, new, upcoming, and seasoned musicians will have a valuable experience at Amped Up Audio!</p>
+          </div>
+        </div>
+        <a class="btn btn-blue" href="/review">Read or leave a review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. BOOK -->
+  <section class="section" id="book">
+    <div class="container">
+      <p class="kicker reveal">Book</p>
+      <h2 class="section-title reveal">Request your session</h2>
+      <div class="book-grid">
+        <div class="book-aside reveal">
+          <p><strong>Tell us when you want to come through.</strong> Pick your service, name your day, and the studio confirms your time.</p>
+          <p>A <strong>$40 deposit via Zelle</strong> — your first hour — locks the session once your time is confirmed.</p>
+          <p>Running late? You have a <strong>20-minute grace period</strong>, then a $20 late fee applies.</p>
+        </div>
+        <div class="booking-widget reveal" id="bookingWidget">
+          <p><strong>The booking form lives on its own page</strong> — pick your service, your day, and your start time. It checks the studio calendar as you go, and the promo / referral code field is right on the form.</p>
+          <div class="cta-band">
+            <a class="btn btn-blue" href="book-a-call.html">Open the booking form</a>
+            <a class="btn btn-ghost" href="call-us.html">Prefer to talk first?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-giant" id="footGiant" aria-hidden="true"><span>AMPED UP AUDIO</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">AMPED UP <span>AUDIO</span></a>
+        <p>Recording studio in El Monte, California. Real room, real engineer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client-portal.html">Client Portal</a>
+        <a href="call-us.html">Call Us</a>
+        <a href="book-a-call.html">Book a session</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/amped_up_audio" target="_blank" rel="noopener">Instagram — @amped_up_audio</a>
+        <a href="tel:+16266028481">Call or text — (626) 602-8481</a>
+        <a href="/review">Leave a review</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elistudios LLC. All rights reserved.</span>
+      <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+      <a class="founders-quiet" href="founders.html">Founder's Pass</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js?v=3"></script>
+<script src="consent.js?v=1"></script>
+<script src="console.js?v=1"></script>
+</body>
+</html>
